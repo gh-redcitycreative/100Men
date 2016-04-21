@@ -43,6 +43,9 @@ Route::get('/live-vote', function () {
 Route::get('/100-admin', function () {
     return view('pages.100-admin');
 });
+Route::get('/events', function () {
+    return view('pages.events');
+});
 Route::get('/create-event', function () {
     return view('pages.create-event');
 });
