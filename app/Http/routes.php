@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/events', 'EventsController@index');
+// Route::get('/events', 'EventsController@index');
 
 
 Route::get('/', function () {
