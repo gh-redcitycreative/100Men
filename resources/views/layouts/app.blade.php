@@ -26,6 +26,17 @@
     </style>
 </head>
 <body id="app-layout">
+    @if (Auth::guest())
+        
+    @elseif (Auth::user()->name == 'Casper')
+           <nav class="navbar navbar-default navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <p>100MenYYC Admin Menu</p>
+                    </div>
+                </div>          
+            </nav>    
+    @endif
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
