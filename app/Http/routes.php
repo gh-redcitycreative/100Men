@@ -13,9 +13,8 @@
 
 Route::get('/events', 'EventsController@index');
 
-
 Route::get('/', function () {
-    return view('pages.home');
+    return view('welcome');
 });
 Route::get('/new-member', function () {
     return view('pages.new-member');
@@ -68,6 +67,9 @@ Route::get('/report', function () {
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/home', 'HomeController@index');
 });
