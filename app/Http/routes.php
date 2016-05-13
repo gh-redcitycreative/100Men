@@ -11,6 +11,7 @@
 |
 */
 
+// Route::get('/events', 'EventsController@index');
 
 
 Route::get('/', function () {
@@ -67,58 +68,6 @@ Route::get('/report', function () {
 |
 */
 
-
-Route::group(['middleware' => 'web'], function () {
-    Route::auth();
-    Route::get('/home', 'HomeController@index');
-    
-    Route::get('/dashboard', 'DashboardController@index');
-    
-    Route::get('/events', 'EventsController@index');
-
-    Route::get('/', function () {
-        return view('welcome');
-    });
-    Route::get('/new-member', function () {
-        return view('pages.new-member');
-    });
-    Route::get('/returning-member', function () {
-        return view('pages.returning-member');
-    });
-
-    Route::get('/payment', function () {
-        return view('pages.payment');
-    });
-    Route::get('/thank-you-checkin', function () {
-        return view('pages.thank-you-checkin');
-    });
-    Route::get('/secret-code', function () {
-        return view('pages.secret-code');
-    });
-    Route::get('/vote', function () {
-        return view('pages.vote');
-    });
-    Route::get('/thank-you-vote', function () {
-        return view('pages.thank-you-vote');
-    });
-
-    Route::get('/live-vote', function () {
-        return view('pages.live-vote');
-    });
-    Route::get('/100-admin', function () {
-        return view('pages.100-admin');
-    });
-    Route::get('/events', function () {
-        return view('pages.events');
-    });
-    Route::get('/create-event', function () {
-        return view('pages.create-event');
-    });
-    Route::get('/report', function () {
-        return view('pages.report');
-    });
-    
-    
-
-
+Route::group(['middleware' => ['web']], function () {
+    //
 });
