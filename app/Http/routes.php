@@ -11,7 +11,7 @@
 |
 */
 
-// Route::get('/events', 'EventsController@index');
+
 
 
 
@@ -64,9 +64,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/100-admin', function () {
         return view('pages.100-admin');
     });
-    Route::get('/events', function () {
-        return view('pages.events');
-    });
+
     Route::get('/create-event', function () {
         return view('pages.create-event');
     });
@@ -75,4 +73,12 @@ Route::group(['middleware' => 'web'], function () {
     });
 
     Route::get('/home', 'HomeController@index');
+
+    Route::get('/events', 'EventsController@index');
+
+    Route::get('events/{event}', 'EventsController@show');
+
+    Route::post('events/{event}', 'EventsController@addEvent');
+
+
 });
