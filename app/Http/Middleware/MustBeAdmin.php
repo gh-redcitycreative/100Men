@@ -15,9 +15,9 @@ class MustBeAdmin
      */
     public function handle($request, Closure $next)
     {
-        // figure this out 
-        //$user = request($user)
-        if($user && $user->admin == true){
+        $user = $request->user();
+
+        if($user && $user->name == 'Admin'){
             return $next($request);
         }
         abort(404, 'No Way');
