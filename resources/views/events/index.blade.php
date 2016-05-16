@@ -8,13 +8,13 @@
 	@foreach ($events as $event)
 
 		<div>
-			{{ $event->title }}
+			<a href="/events/{{ $event->id }}">{{ $event->title }}</a>
 		</div>
 
 	@endforeach
 
 	<h3>Add an Event</h3>
-	<form method="Post" action="/Events/{{ $event->id }}">
+	<form method="Post" action="/Events/{{ $event->id }}/add">
 			<input placeholder="title" name="title">
 			<input placeholder="passcode" name="passcode">
 			<input placeholder="event_date" name="event_date">
