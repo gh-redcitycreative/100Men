@@ -17,8 +17,8 @@ class CreateEventsTable extends Migration
             $table->string('title');
             $table->string('passcode');
             $table->timestamps();
-            $table->timestamp('event_date');
-            $table->string('start_time');
+            $table->timestamp('event_date')->null;
+            $table->string('start_time')->null;
             $table->text('location');
         });
     }
