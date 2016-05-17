@@ -64,7 +64,7 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('events/{event}', 'EventsController@show');
 
-    Route::post('events/{event}/add', 'EventsController@addEvent');
+    Route::post('events/add', 'EventsController@addEvent');
 
     Route::post('events/{event}/charities', 'CharitiesController@store');
 
