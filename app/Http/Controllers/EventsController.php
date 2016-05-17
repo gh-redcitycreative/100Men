@@ -22,10 +22,10 @@ class EventsController extends Controller
 
     public function show(Event $event)
     {
+         
     	 return view('events.show', compact('event'));
     }
 
-	protected $fillable = ['title', 'passcode', 'event_date', 'start_time', 'location'];
 
     public function addEvent()
     {
