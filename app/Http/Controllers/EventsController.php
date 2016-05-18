@@ -30,20 +30,10 @@ class EventsController extends Controller
 
     public function addEvent(Request $request)
     {
-        //return request()->all();
 
     	$event = new Event;
         $event->create($request->all());
-
         return back();
-
-    	// $event->title = $request->title;
-    	// $event->passcode = $request->passcode;
-    	// // $event->event_date = new DateTime;
-    	// // $event->start_time = new DateTime;
-    	// $event->location = $request->location;
-    	
-    	// $event->save();
     }
 
 }
