@@ -72,15 +72,23 @@ Route::group(['middleware' => 'web'], function () {
         'middleware' => 'auth',
         'uses' => 'EventsController@show'
     ]);
+
+    Route::get('events/add', [
+        'middleware' => 'auth',
+        'uses' => 'EventsController@addEvent'
+    ]);
     
+    Route::post('events/{event}/charities',[
+        'middleware' => 'auth',
+        'uses' => 'CharitiesController@store'
+     ]);
 
-    // Route::get('events/{event}', 'EventsController@show');
+    Route::get('charities/{charity}/edit', [
+        'middleware' => 'auth',
+        'uses' => 'CharitiesController@edit'
+    ]);
 
-    Route::post('events/add', 'EventsController@addEvent');
-
-    Route::post('events/{event}/charities', 'CharitiesController@store');
-
-    Route::get('charities/{charity}/edit', 'CharitiesController@edit');
+    // Route::get('charities/{charity}/edit', 'CharitiesController@edit');
 
     
 });

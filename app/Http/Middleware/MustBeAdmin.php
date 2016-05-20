@@ -17,7 +17,7 @@ class MustBeAdmin
     {
         $user = $request->user();
 
-        if($user && $user->name == 'Admin'){
+        if($user && $user->admin == 'admin'){
             return $next($request);
         }
         abort(404, 'No Way');
