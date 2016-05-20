@@ -54,9 +54,9 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('/events', 'EventsController@index');
 
-    // Route::get('/create-event', function () {
-    //     return view('pages.create-event');
-    // });
+    Route::get('/create-event', function () {
+        return view('pages.create-event');
+    });
 
     // Admin Pages
 
@@ -69,7 +69,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/dashboard', 'DashboardController@index');
 
     Route::get('events/{event}', [
-        'middleware' => 'auth',
+        'middleware' => 'admin',
         'uses' => 'EventsController@show'
     ]);
 
