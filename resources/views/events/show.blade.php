@@ -1,4 +1,4 @@
-@extends('template')
+@extends('layouts.app')
 
 @section('content')
 	
@@ -14,6 +14,8 @@
 		
 		
 	@endforeach	
+
+	 
 
 	<div class="row">
 		<div class="col col-xs-9">
@@ -31,5 +33,9 @@
 			</form>			
 		</div>
 	</div>
+
 	
 @endsection
+
+
+                   

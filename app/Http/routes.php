@@ -13,31 +13,43 @@
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
+    
+    // Members 
+    Route::get('/home', 'HomeController@index');
     Route::get('/', function () {
         return view('welcome');
     });
-    Route::get('/home', 'HomeController@index');
-    Route::get('/events', 'EventsController@index');
-    
-    // Admin Pages
+    Route::get('current-event', [
+        'middleware' => 'auth',
+        'uses' => 'EventsController@show-event'
+    ]);
 
+   
+
+    // Admin
     Route::get('/dashboard', 'DashboardController@index');
+    Route::get('/events', [
+        'middleware' => 'auth',
+        'uses' => 'EventsController@index'
+    ]);
     Route::get('events/{event}', [
         'middleware' => 'auth',
         'uses' => 'EventsController@show'
     ]);
-    Route::get('events/add', [
-        'middleware' => 'auth',
-        'uses' => 'EventsController@addEvent'
-    ]);
-    Route::post('events/{event}/charities',[
-        'middleware' => 'auth',
+        Route::post('events/{event}/charities',[
+        'middleware' => 'admin',
         'uses' => 'CharitiesController@store'
      ]);
+    Route::get('events/add', [
+        'middleware' => 'admin',
+        'uses' => 'EventsController@addEvent'
+    ]);
     Route::get('charities/{charity}/edit', [
-        'middleware' => 'auth',
+        'middleware' => 'admin',
         'uses' => 'CharitiesController@edit'
     ]);
-    Route::get('charities/{charity}/delete', 'CharitiesController@delete');
-
+    Route::get('charities/{charity}/delete', [
+        'middleware' => 'admin',
+        'uses' => 'CharitiesController@delete'
+    ]);
 });
