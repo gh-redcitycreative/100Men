@@ -4,13 +4,15 @@
 	
 	<h1>{{ $event->title }}</h1>
 	@foreach ($event->charities as $charity)
+	<div class='charity'>
+		<p></p>
+		<p><a href="/charities/{{ $charity->id }}/delete" class="btn btn-danger pull-right"> Delete</a><a href="/charities/{{ $charity->id }}/edit" class="btn btn-warning pull-right" >Edit</a></p>
 		<h4> {{ $charity->title }} </h4>
-
 		<p> {{ $charity->body }} </p>
-		
-		<p><a href="/charities/{{ $charity->id }}/edit" >Edit</a></p>
-		<p><a href="/charities/{{ $charity->id }}/delete" >Delete</a></p>
 
+	</div>	
+		
+		
 	@endforeach	
 
 	<div class="row">
