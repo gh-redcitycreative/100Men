@@ -1,4 +1,4 @@
-@extends('template')
+@extends('layouts.app')
 
 @section('content')
 	
@@ -12,6 +12,8 @@
 		<p><a href="/charities/{{ $charity->id }}/delete" >Delete</a></p>
 
 	@endforeach	
+
+	 
 
 	<div class="row">
 		<div class="col col-xs-9">
@@ -29,5 +31,9 @@
 			</form>			
 		</div>
 	</div>
+
 	
 @endsection
+
+
+                   

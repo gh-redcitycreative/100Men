@@ -19,17 +19,21 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/', function () {
         return view('welcome');
     });
-   
+    Route::get('current-event', [
+        'middleware' => 'auth',
+        'uses' => 'EventsController@show-event'
+    ]);
 
+   
 
     // Admin
     Route::get('/dashboard', 'DashboardController@index');
-     Route::get('/events', [
-        'middleware' => 'admin',
+    Route::get('/events', [
+        'middleware' => 'auth',
         'uses' => 'EventsController@index'
     ]);
     Route::get('events/{event}', [
-        'middleware' => 'admin',
+        'middleware' => 'auth',
         'uses' => 'EventsController@show'
     ]);
         Route::post('events/{event}/charities',[
