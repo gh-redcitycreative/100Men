@@ -88,7 +88,7 @@ Route::group(['middleware' => 'web'], function () {
         'uses' => 'CharitiesController@edit'
     ]);
 
-    // Route::get('charities/{charity}/edit', 'CharitiesController@edit');
+ Route::get('charities/{charity}/delete', 'CharitiesController@delete');
 
     
 });

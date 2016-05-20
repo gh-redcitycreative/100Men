@@ -14,6 +14,7 @@ class CreateCharitiesTable extends Migration
     {
         Schema::create('charities', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned()->index();            
             $table->integer('event_id')->unsigned()->index();
             $table->text('title');
             $table->text('body');
