@@ -50,19 +50,31 @@ Route::group(['middleware' => 'web'], function () {
         return view('pages.100-admin');
     });
 
-    Route::get('/create-event', function () {
-        return view('pages.create-event');
-    });
-    Route::get('/report', function () {
-        return view('pages.report');
-    });
-
     Route::get('/home', 'HomeController@index');
-    Route::get('/dashboard', 'DashboardController@index');
 
     Route::get('/events', 'EventsController@index');
 
-    Route::get('events/{event}', 'EventsController@show');
+    // Route::get('/create-event', function () {
+    //     return view('pages.create-event');
+    // });
+
+    // Admin Pages
+
+    Route::get('/create-event', ['middleware' => 'auth', function() {
+    }]);
+
+    Route::get('/report', ['middleware' => 'auth', function() {
+    }]);
+
+    Route::get('/dashboard', 'DashboardController@index');
+
+    Route::get('events/{event}', [
+        'middleware' => 'auth',
+        'uses' => 'EventsController@show'
+    ]);
+    
+
+    // Route::get('events/{event}', 'EventsController@show');
 
     Route::post('events/add', 'EventsController@addEvent');
 
