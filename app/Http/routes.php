@@ -69,6 +69,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::post('events/{event}/charities', 'CharitiesController@store');
 
     Route::get('charities/{charity}/edit', 'CharitiesController@edit');
-
+    Route::patch('charities/{charity}', 'CharitiesController@update');
+    Route::get('charities/{charity}/delete', 'CharitiesController@delete');
     
 });
