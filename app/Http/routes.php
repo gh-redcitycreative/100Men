@@ -19,12 +19,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/', function () {
         return view('welcome');
     });
-    Route::get('current-event', [
-        'middleware' => 'auth',
-        'uses' => 'EventsController@show-event'
-    ]);
-
-   
+    
 
     // Admin
     Route::get('/dashboard', 'DashboardController@index');
