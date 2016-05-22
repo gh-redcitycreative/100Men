@@ -7,15 +7,19 @@ use App\Charity;
 use App\Event;
 use App\Http\Requests;
 
+
 class CharitiesController extends Controller
 {
     public function store(Request $request, Event $event)
     {
-        return $request->all();
+        $charity = new Charity($request->all());
+        $charity->user_id = \Auth::User()->id;
+        $event->addCharity($charity);
+
 		// $event->addCharity(
 		// 	new Charity($request->all())
 		// );
-  //   	return back();
+    	return back();
     }
     public function edit(Charity $charity)
     { 
