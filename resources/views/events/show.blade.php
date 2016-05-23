@@ -9,6 +9,19 @@
 		<p><a href="/charities/{{ $charity->id }}/delete" class="btn btn-danger pull-right"> Delete</a><a href="/charities/{{ $charity->id }}/edit" class="btn btn-warning pull-right" >Edit</a></p>
 		<h4> {{ $charity->title }} </h4>
 		<p> {{ $charity->body }} </p>
+			
+
+			<p>Total Votes: {{ $charity->votes->count() }}</p>
+
+			<form method="POST" action="/charities/{{ $charity->id }}/votes">
+				<div class="form-group">
+					{{ csrf_field() }}
+					<input type="integer" name="votes">
+					<button type="submit" class="btn btn-primary">Vote</button>
+				</div>
+			</form>
+
+			 
 
 	</div>	
 		

@@ -47,4 +47,9 @@ Route::group(['middleware' => 'web'], function () {
         'middleware' => 'admin',
         'uses' => 'CharitiesController@delete'
     ]);
+
+    Route::post('charities/{charity}/votes', [
+        'middleware' => 'admin',
+        'uses' => 'VotesController@store'
+     ]);
 });

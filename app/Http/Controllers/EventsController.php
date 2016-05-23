@@ -34,6 +34,8 @@ class EventsController extends Controller
         return back();
     }
 
+    
+
 }
 
 

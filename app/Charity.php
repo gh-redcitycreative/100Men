@@ -16,5 +16,15 @@ class Charity extends Model
     {
     	return $this->belongsTo(User::class);
     }
+    public function votes()
+    {
+    	 return $this->hasMany('App\Vote');
+    }
+    // public function addVote(Vote $vote)
+    // {    
+    //     return $this->votes()->save($vote);
+    // }
+        
  
 }
+

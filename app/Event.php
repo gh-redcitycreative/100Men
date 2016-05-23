@@ -16,4 +16,6 @@ class Event extends Model
   	{
   		return $this->charities()->save($charity);
   	}
+
+  
 }

@@ -15,10 +15,6 @@ class CharitiesController extends Controller
         $charity = new Charity($request->all());
         $charity->user_id = \Auth::User()->id;
         $event->addCharity($charity);
-
-		// $event->addCharity(
-		// 	new Charity($request->all())
-		// );
     	return back();
     }
     public function edit(Charity $charity)
@@ -35,6 +31,15 @@ class CharitiesController extends Controller
         $charity->delete();
         return back();
     }
+
+    public function addVote(Request $request)
+    {
+        $vote = new Vote($request->all());
+        $charity->addVote($vote);
+        return back();
+    }
+
+    
 
 
 
