@@ -19,6 +19,12 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/', function () {
         return view('welcome');
     });
+
+    Route::get('charities/{charity}/voting', [
+        'middleware' => 'admin',
+        'uses' => 'VotesController@newVote'
+     ]);
+
     
 
     // Admin
@@ -48,7 +54,7 @@ Route::group(['middleware' => 'web'], function () {
         'uses' => 'CharitiesController@delete'
     ]);
 
-    Route::post('charities/{charity}/votes', [
+    Route::post('charities/{charity}/createVote', [
         'middleware' => 'admin',
         'uses' => 'VotesController@store'
      ]);

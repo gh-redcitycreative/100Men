@@ -17,5 +17,10 @@ class Event extends Model
   		return $this->charities()->save($charity);
   	}
 
+    public function votes()
+    {
+        return $this->hasManyThrough('App\Vote', 'App\Charity');
+    }
+    
   
 }

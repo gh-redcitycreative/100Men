@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Event;
 use App\Charity;
-// use App\Http\Requests;
+use App\Vote;
+use App\Http\Requests;
 use DB;
-//use App\Http\Controllers\Controller;
 
 
 
@@ -16,10 +17,34 @@ class VotesController extends Controller
 
     public function store(Request $request, Charity $charity)
     {
-        $vote = new Vote($request->all());
-        $vote->user_id = \Auth::User()->id;
-        $charity->addVote($vote);
-    	return back();
+
+    
+
+    	$passcode = $request->get('passcode');
+        $event = \App\Event::find($charity->event_id);
+
+        // return $event->passcode;
+
+        if($passcode == $event->passcode){
+             $vote = new Vote();
+	         $charity->addVote($vote);
+	         $vote->charity_id = $charity->id;  
+	        return back();
+        }
+        else{
+           return back();
+           // flash message
+        }
+
+    }
+
+    public function newVote(Request $request, Charity $charity)
+    {
+    	return view('votes.voting', compact('charity'));
+
+    	
+		
+
     }
 
 

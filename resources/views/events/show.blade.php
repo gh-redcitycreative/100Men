@@ -13,11 +13,15 @@
 
 			<p>Total Votes: {{ $charity->votes->count() }}</p>
 
+
 			<form method="POST" action="/charities/{{ $charity->id }}/votes">
 				<div class="form-group">
 					{{ csrf_field() }}
-					<input type="integer" name="votes">
-					<button type="submit" class="btn btn-primary">Vote</button>
+					
+
+					<a class="btn btn-primary" type="button" href="/charities/{{ $charity->id }}/voting">Vote</a>
+
+					
 				</div>
 			</form>
 

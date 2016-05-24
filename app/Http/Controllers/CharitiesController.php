@@ -32,16 +32,6 @@ class CharitiesController extends Controller
         return back();
     }
 
-    public function addVote(Request $request)
-    {
-        $vote = new Vote($request->all());
-        $charity->addVote($vote);
-        return back();
-    }
-
-    
-
-
 
 
 

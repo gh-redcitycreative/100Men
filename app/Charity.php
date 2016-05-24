@@ -20,10 +20,10 @@ class Charity extends Model
     {
     	 return $this->hasMany('App\Vote');
     }
-    // public function addVote(Vote $vote)
-    // {    
-    //     return $this->votes()->save($vote);
-    // }
+    public function addVote(Vote $vote)
+    {       
+        return $this->votes()->save($vote);
+    }
         
  
 }
