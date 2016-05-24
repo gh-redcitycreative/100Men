@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Vote extends Model
 {
-   protected $fillable = ['votes'];
+   // protected $fillable = ['votes'];
 
    // public function charity()
    // {
