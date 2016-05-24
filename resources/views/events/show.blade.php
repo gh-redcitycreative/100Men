@@ -15,7 +15,7 @@
 		
 	@endforeach	
 
-	 
+
 
 	<div class="row">
 		<div class="col col-xs-9">
