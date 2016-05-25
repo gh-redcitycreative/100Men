@@ -11,6 +11,11 @@ class Event extends Model
   	{
   		return $this->hasMany('App\Charity');
   	}
+    
+    public function currents()
+    {
+      return $this->hasMany('App\Current)');
+    }
   	
   	public function addCharity(Charity $charity)
   	{

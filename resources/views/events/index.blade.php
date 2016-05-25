@@ -13,6 +13,14 @@
 
 	@endforeach
 
+	
+
+
+	<h2>current event</h2>
+	<p>{{ $currentEvent->title }} </p>
+
+
+
 	<h3>Add an Event</h3>
 
 

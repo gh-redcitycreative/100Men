@@ -27,7 +27,7 @@ Route::group(['middleware' => 'web'], function () {
 
 
     Route::get('charities/{charity}/voting', [
-        'middleware' => 'admin',
+        'middleware' => 'auth',
         'uses' => 'VotesController@newVote'
      ]);
 
