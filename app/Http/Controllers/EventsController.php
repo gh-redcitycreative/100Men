@@ -24,8 +24,20 @@ class EventsController extends Controller
     public function show(Event $event)
     {     
         
-    	 return view('events.show', compact('event', 'current'));
+    	 return view('events.show', compact('event'));
     }
+
+    public function current()
+    {
+        $current = Current::first();
+        $currentEvent = Event::find($current->event_id);
+        $events = Event::all();
+ 
+        return view('events.current', compact('events','currentEvent'));  
+    }
+
+
+
     public function addEvent(Request $request)
     {
     	$event = new Event;

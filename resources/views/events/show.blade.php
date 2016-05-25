@@ -4,7 +4,6 @@
 	
 	<h1>{{ $event->title }}</h1>
 
-	<h2> current event is {{ $current->event_id }}</h2>
 	@foreach ($event->charities as $charity)
 	<div class='charity'>
 		<p></p>

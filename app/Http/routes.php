@@ -15,10 +15,17 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
     
     // Members 
-    Route::get('/home', 'HomeController@index');
+    // Route::get('/home', 'HomeController@index');
     Route::get('/', function () {
         return view('welcome');
     });
+
+    Route::get('home', [
+        'middleware' => 'auth',
+        'uses' => 'EventsController@current'
+    ]);
+
+
 
      Route::get('donate', [
         'middleware' => 'auth',
@@ -41,6 +48,7 @@ Route::group(['middleware' => 'web'], function () {
         'middleware' => 'auth',
         'uses' => 'EventsController@show'
     ]);
+
     Route::post('events/{event}/charities',[
         'middleware' => 'admin',
         'uses' => 'CharitiesController@store'
