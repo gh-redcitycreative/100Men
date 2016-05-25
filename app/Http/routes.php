@@ -53,7 +53,15 @@ Route::group(['middleware' => 'web'], function () {
         'middleware' => 'admin',
         'uses' => 'CharitiesController@store'
      ]);
-    Route::get('events/add', [
+    Route::get('event/{event}/current',[
+        'middleware' => 'admin',
+        'uses' => 'EventsController@updateCurrent'
+     ]);
+
+
+
+
+    Route::post('events/add', [
         'middleware' => 'admin',
         'uses' => 'EventsController@addEvent'
     ]);

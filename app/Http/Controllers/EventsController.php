@@ -31,9 +31,16 @@ class EventsController extends Controller
     {
         $current = Current::first();
         $currentEvent = Event::find($current->event_id);
-        $events = Event::all();
- 
-        return view('events.current', compact('events','currentEvent'));  
+        return view('events.current', compact('currentEvent'));  
+    }
+
+    public function updateCurrent(Event $event)
+    {
+        
+        $current = Current::first();
+        $current->event_id = Event::find($event->id)->id;
+        $current->update();
+        return back();  
     }
 
 
