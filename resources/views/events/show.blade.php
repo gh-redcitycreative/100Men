@@ -3,6 +3,7 @@
 @section('content')
 	
 	<h1>{{ $event->title }}</h1>
+
 	@foreach ($event->charities as $charity)
 	<div class='charity'>
 		<p></p>
@@ -28,7 +29,7 @@
 		
 	@endforeach	
 
-	 
+
 
 	<div class="row">
 		<div class="col col-xs-9">

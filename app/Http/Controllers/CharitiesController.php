@@ -32,6 +32,12 @@ class CharitiesController extends Controller
         return back();
     }
 
+     public function payment(Request $request)
+    {
+       
+        return $request;
+    }
+
 
 
 
