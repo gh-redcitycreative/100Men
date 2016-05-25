@@ -13,19 +13,15 @@
 
 			<p>Total Votes: {{ $charity->votes->count() }}</p>
 
+@if(Auth::user()->id == $charity->votes()->user_id)
+ 
+						<a class="btn btn-primary submit" type="button" href="/charities/{{ $charity->id }}/voting">Vote</a>
 
-			<form method="POST" action="/charities/{{ $charity->id }}/votes">
-				<div class="form-group">
-					{{ csrf_field() }}
-					
+						@endif
+		@foreach ($charity->votes as $vote)
 
-					<a class="btn btn-primary" type="button" href="/charities/{{ $charity->id }}/voting">Vote</a>
-
-					
-				</div>
-			</form>
-
-			 
+			 {{ $vote->user_id }}
+	    @endforeach
 
 	</div>	
 		

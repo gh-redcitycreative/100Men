@@ -27,6 +27,7 @@ class VotesController extends Controller
 
         if($passcode == $event->passcode){
              $vote = new Vote();
+             $vote->user_id = \Auth::User()->id;
 	         $charity->addVote($vote);
 	         $vote->charity_id = $charity->id;  
 	        return back();
@@ -40,7 +41,11 @@ class VotesController extends Controller
 
     public function newVote(Request $request, Charity $charity)
     {
-    	return view('votes.voting', compact('charity'));
+
+		  return view('votes.voting', compact('charity'));
+
+		
+    	
 
     	
 		

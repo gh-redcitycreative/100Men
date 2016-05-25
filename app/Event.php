@@ -21,6 +21,7 @@ class Event extends Model
     {
         return $this->hasManyThrough('App\Vote', 'App\Charity');
     }
+  
     
   
 }
