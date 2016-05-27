@@ -18,8 +18,6 @@ class VotesController extends Controller
     public function store(Request $request, Charity $charity)
     {
 
-    
-
     	$passcode = $request->get('passcode');
         $event = \App\Event::find($charity->event_id);
 

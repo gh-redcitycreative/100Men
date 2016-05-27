@@ -14,15 +14,16 @@
 
 			<p>Total Votes: {{ $charity->votes->count() }}</p>
 
-@if(Auth::user()->id == $charity->votes()->user_id)
+			@if($charity->votes as $vote)
+				{{ $vote->user_id }}
  
 						<a class="btn btn-primary submit" type="button" href="/charities/{{ $charity->id }}/voting">Vote</a>
 
 						@endif
-		@foreach ($charity->votes as $vote)
+		
 
-			 {{ $vote->user_id }}
-	    @endforeach
+			 
+	
 
 	</div>	
 		
