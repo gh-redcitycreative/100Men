@@ -80,7 +80,7 @@ Route::group(['middleware' => 'web'], function () {
 
 
     Route::post('charities/{charity}/createVote', [
-        'middleware' => 'admin',
+        'middleware' => 'auth',
         'uses' => 'VotesController@store'
      ]);
 
