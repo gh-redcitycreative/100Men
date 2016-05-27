@@ -23,6 +23,10 @@ class EventsController extends Controller
     {     
     	return view('events.show', compact('event'));
     }
+    public function passcode(Event $event)
+    {     
+        return view('events.passcode', compact('event'));
+    }
 
     public function current()
     {

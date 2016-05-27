@@ -26,7 +26,8 @@
     </style>
 </head>
 <body id="app-layout">
-    @if (Auth::user()->admin == 'admin')
+    @if(Auth::guest())
+    @elseif (Auth::user()->admin == 'admin')
         <nav class="navbar navbar-inverse navbar-static-top">
         <div class="container">
             <div class="navbar-header">
@@ -69,8 +70,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
+                        <li><a href="{{ url('/login') }}">Members Login</a></li>
+                        <li><a href="{{ url('/register') }}">New Member Registration</a></li>
                     @else
                         <li><a href="/donate">Donate</a></li>
                         <li class="dropdown">

@@ -48,6 +48,10 @@ Route::group(['middleware' => 'web'], function () {
         'middleware' => 'auth',
         'uses' => 'EventsController@show'
     ]);
+    Route::get('events/{event}/passcode', [
+        'middleware' => 'auth',
+        'uses' => 'EventsController@passcode'
+    ]);
 
     Route::post('events/{event}/charities',[
         'middleware' => 'admin',
