@@ -26,6 +26,22 @@
     </style>
 </head>
 <body id="app-layout">
+    @if(Auth::guest())
+    @elseif (Auth::user()->admin == 'admin')
+        <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    Admin Menu
+                </a>
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/events') }}">Events</a></li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+    @endif    
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
@@ -40,7 +56,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
+                    100 Men YYC
                 </a>
             </div>
 
@@ -54,8 +70,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
+                        <li><a href="{{ url('/login') }}">Members Login</a></li>
+                        <li><a href="{{ url('/register') }}">New Member Registration</a></li>
                     @else
                         <li><a href="/donate">Donate</a></li>
                         <li class="dropdown">
@@ -76,6 +92,14 @@
     <div class="container">
         @yield('content')
     </div>
+    <footer>
+        <p>100menYYC &copy; {{ date("Y") }} </p>
+        <div class="socials">
+            <a href="http://facebook.com">facebook</a>
+            <a href="http://facebook.com">twitter</a>
+            <a href="http://facebook.com">instagram</a>
+        </div>
+    </footer>
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

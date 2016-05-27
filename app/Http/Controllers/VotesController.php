@@ -24,11 +24,11 @@ class VotesController extends Controller
         // return $event->passcode;
 
         if($passcode == $event->passcode){
-             $vote = new Vote();
-             $vote->user_id = \Auth::User()->id;
-	         $charity->addVote($vote);
-	         $vote->charity_id = $charity->id;  
-	        return back();
+            $vote = new Vote();
+            $vote->user_id = \Auth::User()->id;
+            $charity->addVote($vote);
+            $vote->charity_id = $charity->id;  
+	        return redirect('/home');
         }
         else{
            return back();
