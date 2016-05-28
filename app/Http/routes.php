@@ -41,15 +41,18 @@ Route::group(['middleware' => 'web'], function () {
     // Admin
     Route::get('/dashboard', 'DashboardController@index');
     Route::get('/events', [
-        'middleware' => 'auth',
+        'middleware' => 'admin',
         'uses' => 'EventsController@index'
     ]);
+
+
     Route::get('events/{event}', [
-        'middleware' => 'auth',
+        'middleware' => 'admin',
         'uses' => 'EventsController@show'
     ]);
+
     Route::get('events/{event}/passcode', [
-        'middleware' => 'auth',
+        'middleware' => 'admin',
         'uses' => 'EventsController@passcode'
     ]);
 
@@ -63,12 +66,17 @@ Route::group(['middleware' => 'web'], function () {
      ]);
 
 
-
+// event add functionality 
+    Route::get('/events/add', function(){
+        return view('events.add');
+    })->middleware(['admin']);
 
     Route::post('events/add', [
         'middleware' => 'admin',
         'uses' => 'EventsController@addEvent'
     ]);
+
+    //Charity edit functionality 
     Route::get('charities/{charity}/edit', [
         'middleware' => 'admin',
         'uses' => 'CharitiesController@edit'
@@ -77,11 +85,12 @@ Route::group(['middleware' => 'web'], function () {
         'middleware' => 'admin',
         'uses' => 'CharitiesController@update'
     ]);
+
+
     Route::get('charities/{charity}/delete', [
         'middleware' => 'admin',
         'uses' => 'CharitiesController@delete'
     ]);
-
 
     Route::post('charities/{charity}/createVote', [
         'middleware' => 'auth',
