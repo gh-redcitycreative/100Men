@@ -45,9 +45,13 @@ Route::group(['middleware' => 'web'], function () {
         'uses' => 'EventsController@index'
     ]);
 
+    Route::get('/events/add', [
+        'middleware' => 'admin',
+        'uses' => 'EventsController@add'
+    ]);
 
     Route::get('events/{event}', [
-        'middleware' => 'admin',
+        'middleware' => 'auth',
         'uses' => 'EventsController@show'
     ]);
 
@@ -67,9 +71,6 @@ Route::group(['middleware' => 'web'], function () {
 
 
 // event add functionality 
-    Route::get('/events/add', function(){
-        return view('events.add');
-    })->middleware(['admin']);
 
     Route::post('events/add', [
         'middleware' => 'admin',

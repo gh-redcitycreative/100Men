@@ -27,8 +27,7 @@ class VotesController extends Controller
         }
         else{
             // flash message
-           return back();
-           
+           return back(); 
         }
     }
 
