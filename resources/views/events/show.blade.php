@@ -8,7 +8,16 @@
 			<h4> {{ $charity->title }} </h4>
 			<p> {{ $charity->body }} </p>
 			<p>Total Votes: {{ $charity->votes->count() }}</p>
-		</div>	
+
+			@if($charity->votes as $vote)
+				{{ $vote->user_id }}
+ 
+						<a class="btn btn-primary submit" type="button" href="/charities/{{ $charity->id }}/voting">Vote</a>
+
+			@endif
+
+	</div>	
+		
 	@endforeach	
 	@if($event->charities->count() < 3)
 		<div class="row">
