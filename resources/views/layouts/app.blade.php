@@ -29,17 +29,25 @@
     @if(Auth::guest())
     @elseif (Auth::user()->admin == 'admin')
         <nav class="navbar navbar-inverse navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-
+            <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Admin Menu
                 </a>
                 <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
                     <li><a href="{{ url('/events') }}">Events</a></li>
+                    <li><a href="{{ url('events/add') }}">Add Event +</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Reports  <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">New Members</a></li>
+                                <li><a href="#">All Members</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
-        </div>
         </nav>
     @endif    
     <nav class="navbar navbar-default navbar-static-top">
@@ -55,9 +63,16 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    100 Men YYC
-                </a>
+                @if (Auth::guest())
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        100 Men YYC
+                    </a>
+                @else
+                    <a class="navbar-brand" href="{{ url('/home') }}">
+                        100 Men YYC
+                    </a>
+
+                @endif
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">

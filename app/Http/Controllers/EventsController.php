@@ -15,7 +15,7 @@ class EventsController extends Controller
     {
         $current = Current::first();
         $currentEvent = Event::find($current->event_id);
-    	$events = Event::all();
+    	$events = Event::orderBy('created_at', 'desc')->get();
     	return view('events.index', compact('events','currentEvent'));	
     }
 
@@ -43,7 +43,10 @@ class EventsController extends Controller
         $current->update();
         return back();  
     }
-
+     public function add()
+    {
+        return view('events.add');
+    }
     public function addEvent(Request $request)
     {
     	$event = new Event;

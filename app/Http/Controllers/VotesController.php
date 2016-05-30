@@ -13,15 +13,10 @@ use DB;
 
 class VotesController extends Controller
 {
- 
-
     public function store(Request $request, Charity $charity)
     {
-
     	$passcode = $request->get('passcode');
         $event = \App\Event::find($charity->event_id);
-
-        // return $event->passcode;
 
         if($passcode == $event->passcode){
             $vote = new Vote();
@@ -31,25 +26,13 @@ class VotesController extends Controller
 	        return redirect('/home');
         }
         else{
-           return back();
-           // flash message
+            // flash message
+           return back(); 
         }
-
     }
 
     public function newVote(Request $request, Charity $charity)
     {
-
-		  return view('votes.voting', compact('charity'));
-
-		
-    	
-
-    	
-		
-
+        return view('votes.voting', compact('charity'));
     }
-
-
-
 }
