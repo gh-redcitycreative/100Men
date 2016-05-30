@@ -12,6 +12,7 @@ class CharitiesController extends Controller
 {
     public function store(Request $request, Event $event)
     {
+        //return $request->all();
         $charity = new Charity($request->all());
         $charity->user_id = \Auth::User()->id;
         $event->addCharity($charity);

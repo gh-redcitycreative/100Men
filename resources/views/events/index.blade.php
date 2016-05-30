@@ -1,13 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-	
 	<h1>All Events</h1>
-	
-
 	@foreach ($events as $event)
 	<div class="event row">
-		<div class="col-xs-10">
+		<div class="col-xs-6">
 			<h3><a href="/events/{{ $event->id }}" class="current-event">{{ $event->title }}</a></h3>
 			<h4 class="text-muted">Event details</h4>
 			<address>
@@ -27,7 +24,7 @@
 				<p><a href="/events/{{ $event->id }}" class="current-event">Add Charities</a></p>	
 			@endif
 		</div>
-		<div class="col-xs-2">
+		<div class="col-xs-6">
 			<p class="text-right">
 				@if($event->id == $currentEvent->id )
 					<a href="#" class='btn btn-danger pull-right'>Current Event</a><br>
