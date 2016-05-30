@@ -54,10 +54,10 @@ class EventsController extends Controller
         return back();
     }
 
-     public function checkIn(Request $request, Event $event)
-    {
-          return back();
-    }
+    //  public function checkIn(Request $request, Event $event)
+    // {
+    //       return back();
+    // }
 }
 
 
