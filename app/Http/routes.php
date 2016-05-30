@@ -38,6 +38,11 @@ Route::group(['middleware' => 'web'], function () {
         'uses' => 'VotesController@newVote'
      ]);
 
+     Route::get('events/{event}/check-in', [
+        'middleware' => 'auth',
+        'uses' => 'EventsController@checkIn'
+     ]);
+
     // Admin
     Route::get('/dashboard', 'DashboardController@index');
     Route::get('/events', [
