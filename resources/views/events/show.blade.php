@@ -18,7 +18,6 @@
 				<form method="POST" action="/events/{{ $event->id }}/charities">
 					<div class="form-group">
 						{{ csrf_field() }}
-						
 						<input class="form-control input-lg" type="text" name="title" placeholder="Charity Name">
 						<textarea class="form-control input-lg" name="body" id="" cols="30" rows="10" placeholder="Charity Description"></textarea>
 					</div>
