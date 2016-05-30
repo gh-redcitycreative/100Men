@@ -53,6 +53,11 @@ class EventsController extends Controller
         $event->create($request->all());
         return back();
     }
+
+     public function checkIn(Request $request, Event $event)
+    {
+          return back();
+    }
 }
 
 
