@@ -13,4 +13,15 @@
 		</form>
 
 
+		<!-- Date picker scripts -->
+<script>
+
+$(function() {
+	alert("Date");
+    $('#date').pickadate();
+    alert("Date");
+  });   
+</script>
+
+
 @endsection

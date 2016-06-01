@@ -17,6 +17,12 @@
     <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
 
 
+     <link href="{{ asset('pickadate/compressed/themes/classic.css') }}" rel="stylesheet">
+    <link href="{{ asset('pickadate/compressed/themes/classic.date.css') }}" rel="stylesheet">
+
+
+
+
     <style>
 
     </style>
@@ -137,13 +143,17 @@
 
 
 
-   <script type="text/javascript">
-    $( '#date' ).pickadate({
-      formatSubmit : 'yyyy-mm-dd 00:00:00',
-      hiddenName: true
-    });
-  </script>
 
+    
+     <script src="{{ asset('pickadate/compressed/picker.js') }}"></script>
+     <script src="{{ asset('pickadate/compressed/picker.date.js') }}"></script>
+
+        <script type="text/javascript">
+        $( '#date' ).pickadate({
+            formatSubmit : 'yyyy-mm-dd 00:00:00',
+            hiddenName: true
+        });
+      </script>
 
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
