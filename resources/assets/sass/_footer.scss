@@ -1,0 +1,15 @@
+footer{
+	background-color:lighten($dk-grey, 20%);
+	padding:30px 0;
+	text-align:center;
+	p{
+		color:white;
+	}
+	a{
+		color:white;
+		text-decoration: underline;
+	}
+	.socials{
+		margin-bottom: 15px;
+	}
+}

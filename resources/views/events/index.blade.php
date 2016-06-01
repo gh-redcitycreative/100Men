@@ -27,10 +27,10 @@
 		<div class="col-xs-6">
 			<p class="text-right">
 				@if($event->id == $currentEvent->id )
-					<a href="#" class='btn btn-danger pull-right'>Current Event</a><br>
+					<a href="#" class='btn btn-danger'>Current Event</a><br>
 					<a href="/events/{{ $event->id }}/passcode" class='btn btn-danger'>Show Passcode</a>	
 				@else
-					<a href="/event/{{ $event->id }}/current" class='btn btn-primary pull-right clear'>Make Current Event</a>
+					<a href="/event/{{ $event->id }}/current" class='btn btn-primary'>Make Current Event</a>
 				@endif
 			</p>
 		</div>		

@@ -13,44 +13,52 @@
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
+    <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
 
     <style>
-        body {
-            font-family: 'Lato';
-        }
 
-        .fa-btn {
-            margin-right: 6px;
-        }
     </style>
 </head>
 <body id="app-layout">
     @if(Auth::guest())
     @elseif (Auth::user()->admin == 'admin')
-        <nav class="navbar navbar-inverse navbar-static-top">
+
+        <nav class="navbar admin-menu navbar-inverse navbar-static-top">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Admin Menu
-                </a>
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
-                    <li><a href="{{ url('/events') }}">Events</a></li>
-                    <li><a href="{{ url('events/add') }}">Add Event +</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            Reports  <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">New Members</a></li>
-                                <li><a href="#">All Members</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <div class="navbar-header">
+
+                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-admin-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>   
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        Admin Menu
+                    </a>
+                </div>
+
+                
+                <div class="collapse navbar-collapse" id="app-admin-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
+                        <li><a href="{{ url('/events') }}">Events</a></li>
+                        <li><a href="{{ url('events/add') }}">Add Event +</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                Reports  <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">New Members</a></li>
+                                    <li><a href="#">All Members</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>    
             </div>
         </nav>
     @endif    
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar user-menu navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
 
@@ -65,14 +73,11 @@
                 <!-- Branding Image -->
                 @if (Auth::guest())
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        100 Men YYC
-                    </a>
                 @else
                     <a class="navbar-brand" href="{{ url('/home') }}">
-                        100 Men YYC
-                    </a>
-
                 @endif
+                     <img src="/images/100-Men-Logo.png" alt="100 men logo">
+                    </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -86,7 +91,7 @@
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Members Login</a></li>
-                        <li><a href="{{ url('/register') }}">New Member Registration</a></li>
+                        <li><a href="{{ url('/register') }}">Not a Member Yet?</a></li>
                     @else
                         <li><a href="/donate">Donate</a></li>
                         <li class="dropdown">
@@ -104,16 +109,22 @@
             </div>
         </div>
     </nav>
-    <div class="container">
-        @yield('content')
-    </div>
+ 
+    @yield('header')
+    <main>
+        <div class="container">
+            @yield('content')
+        </div>
+    </main>
+    
     <footer>
-        <p>100menYYC &copy; {{ date("Y") }} </p>
+        <p>100Men YYC &copy; {{ date("Y") }} </p>
         <div class="socials">
-            <a href="http://facebook.com">facebook</a>
-            <a href="http://facebook.com">twitter</a>
+            <a href="http://facebook.com">facebook</a> |
+            <a href="http://facebook.com">twitter</a> |
             <a href="http://facebook.com">instagram</a>
         </div>
+        <p id=siteby >site by: <a href="www.redcitycreative.com">RedCity Creative</a>
     </footer>
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
