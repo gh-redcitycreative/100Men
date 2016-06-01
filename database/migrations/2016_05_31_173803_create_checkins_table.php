@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEventsTable extends Migration
+class CreateCheckinsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,17 +12,13 @@ class CreateEventsTable extends Migration
      */
     public function up()
     {
-        Schema::create('events', function (Blueprint $table) {
+        Schema::create('checkins', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->string('passcode');
             $table->timestamps();
-            $table->string('start_time');
-            $table->text('location');
-            $table->dateTime('date');
+            $table->integer('user_id')->unsigned()->index();
+            $table->integer('event_id')->unsigned()->index();
         });
     }
-    
 
     /**
      * Reverse the migrations.
@@ -31,6 +27,6 @@ class CreateEventsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('events');
+        Schema::drop('checkins');
     }
 }

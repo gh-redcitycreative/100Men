@@ -25,8 +25,6 @@ Route::group(['middleware' => 'web'], function () {
         'uses' => 'EventsController@current'
     ]);
 
-
-
      Route::get('donate', [
         'middleware' => 'auth',
         'uses' => 'DonationController@donate'
@@ -38,10 +36,10 @@ Route::group(['middleware' => 'web'], function () {
         'uses' => 'VotesController@newVote'
      ]);
 
-     // Route::get('events/{event}/check-in', [
-     //    'middleware' => 'auth',
-     //    'uses' => 'EventsController@checkIn'
-     // ]);
+     Route::post('events/{event}/check-in', [
+        'middleware' => 'auth',
+        'uses' => 'EventsController@checkIn'
+     ]);
 
     // Admin
     Route::get('/dashboard', 'DashboardController@index');

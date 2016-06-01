@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-	protected $fillable = ['title', 'passcode', 'start_time', 'location'];
+	protected $fillable = ['title', 'passcode', 'start_time', 'location', 'date'];
   	public function charities()
   	{
   		return $this->hasMany('App\Charity');

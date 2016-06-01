@@ -8,6 +8,9 @@
 				<input class="form-control input-lg"type="text" placeholder="passcode" name="passcode">
 				<input class="form-control input-lg"type="text" placeholder="start time" name="start_time">
 				<input class="form-control input-lg"type="text" placeholder="location" name="location">
+				<input class="form-control input-lg" id="date" name="date" type="date" placeholder="Event date">
 				<button class='btn btn-primary' type="submit">Add Event</button>
 		</form>
+
+
 @endsection

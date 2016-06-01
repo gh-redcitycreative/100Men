@@ -4,6 +4,14 @@
 		
 	<h1>{{ $currentEvent->title }}</h1>
 
+
+	<form method="POST" action="/events/{{ $currentEvent->id }}/check-in">
+		<div class="form-group">
+			{{ csrf_field() }}
+			<button typoe="submit" class="btn btn-primary">Check-in</a>
+		</div>
+	</form>
+
 	@foreach ($currentEvent->charities as $charity)
 
 	<div class='charity'>
