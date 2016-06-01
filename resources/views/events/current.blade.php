@@ -33,7 +33,10 @@
 	<div class='charity'>
 		<div class="row ">
 			<div class="col-xs-12 col-sm-3 charity-logo">
-				<img class='' src="/images/imgres.png" alt="#">
+			
+					<img src='{{ asset($charity->thumbnail) }}'>
+				
+				<!-- <img class='' src="/images/imgres.png" alt="#"> -->
 			</div>
 			<div class="col-xs-12 col-sm-9 charity-description">
 				@if (Auth::user()->admin == 'admin')
