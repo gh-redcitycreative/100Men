@@ -11,9 +11,23 @@
 @endsection
 
 
+
+
+
+
+
 @section('content')
 	<h2 class="lead">Thank you for coming <br>this evening!</h2>
 	<p class="lead text-center">Here are your nominees, once voting has begun we will display the secret word so that you can submit your vote.</p>
+
+		<form method="POST" action="/events/{{ $currentEvent->id }}/check-in">
+		<div class="form-grou text-center">
+			{{ csrf_field() }}
+			<button type="submit" class="btn btn-primary">Check-in</a>
+		</div>
+	</form>
+
+
 	@foreach ($currentEvent->charities as $charity)
 	
 	<div class='charity'>

@@ -13,7 +13,9 @@
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
+
 
     <style>
 
@@ -129,6 +131,18 @@
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <!-- Include library's JS files -->
+
+
+
+   <script type="text/javascript">
+    $( '#date' ).pickadate({
+      formatSubmit : 'yyyy-mm-dd 00:00:00',
+      hiddenName: true
+    });
+  </script>
 
 
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
