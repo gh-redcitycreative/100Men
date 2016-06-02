@@ -10,4 +10,8 @@ class Current extends Model
     {
     	return $this->belongsTo('App\Event');
     }
+    public function charity()
+    {
+    	return $this->belongsTo('App\Charity');
+    }
 }

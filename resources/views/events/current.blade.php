@@ -44,13 +44,14 @@
 	<div class='charity'>
 		<div class="row ">
 			<div class="col-xs-12 col-sm-3 charity-logo">
-				<img class='' src="/images/imgres.png" alt="#">
-			<!-- 	<p class="admin-edit"><a href="/charities/{{ $charity->id }}/delete" class="btn btn-danger pull-right"> Delete</a><a href="/charities/{{ $charity->id }}/edit" class="btn btn-warning pull-right" >Edit</a></p> -->
+				@if (Auth::user()->admin == 'admin')
+					<p class="admin-edit"><a href="/charities/{{ $charity->id }}/delete" class="btn btn-danger pull-right"> Delete</a><a href="/charities/{{ $charity->id }}/edit" class="btn btn-warning pull-right" >Edit</a></p> 
+				@endif			
+				<img src='{{ asset($charity->thumbnail) }}'>
+
 			</div>
 			<div class="col-xs-12 col-sm-9 charity-description">
-				@if (Auth::user()->admin == 'admin')
-					
-				@endif
+				
 				<h4> {{ $charity->title }} </h4>
 				<h5> <a href="#">www.kickstarter.com</a></h5>
 				<p > {{ $charity->body }} </p>

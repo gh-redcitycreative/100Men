@@ -18,6 +18,7 @@ class CreateCharitiesTable extends Migration
             $table->integer('event_id')->unsigned()->index();
             $table->text('title');
             $table->text('body');
+            $table->string('thumbnail');
             $table->timestamps();
         });
     }

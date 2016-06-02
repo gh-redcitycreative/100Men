@@ -65,7 +65,8 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::post('events/{event}/charities',[
         'middleware' => 'admin',
-        'uses' => 'CharitiesController@store'
+        'uses' => 'CharitiesController@store',
+        'file' => 'true' 
      ]);
     Route::get('event/{event}/current',[
         'middleware' => 'admin',

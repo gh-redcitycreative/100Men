@@ -15,10 +15,11 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<h3> Add a new Charity </h3>
-				<form method="POST" action="/events/{{ $event->id }}/charities">
+				<form enctype="multipart/form-data" method="POST" action="/events/{{ $event->id }}/charities">
 					<div class="form-group">
 						{{ csrf_field() }}
 						<input class="form-control input-lg" type="text" name="title" placeholder="Charity Name">
+						<input class="form-control input-lg" type="file" name="thumbnail">
 						<textarea class="form-control input-lg" name="body" id="" cols="30" rows="10" placeholder="Charity Description"></textarea>
 					</div>
 					<div class="form-group">
