@@ -8,13 +8,17 @@ header {
   padding: 0 0 15px;
   margin-bottom: 50px; }
 
+main {
+  padding-bottom: 50px; }
+
 h1, h2, h3, h4, h5, h6, p {
   color: white; }
 
 .btn-primary {
   background-color: white;
   color: #554a6c;
-  border: 2px solid white; }
+  border: 2px solid white;
+  transition: .2s; }
 
 .btn-primary:hover,
 .btn-primary:focus,
@@ -31,6 +35,23 @@ a {
   color: white;
   text-decoration: underline; }
 
+.panel {
+  color: purple; }
+  .panel .btn-primary {
+    background-color: #554a6c;
+    border: 2px solid white;
+    color: white; }
+  .panel .btn-primary:hover {
+    background-color: white;
+    color: #554a6c;
+    border: 2px solid #554a6c; }
+  .panel a.btn-link {
+    color: #554a6c;
+    text-decoration: underline; }
+
+.register-logo {
+  padding-top: 30px; }
+
 .welcome {
   padding: 50px 0 50px;
   color: white; }
@@ -40,6 +61,29 @@ a {
     padding-bottom: 15px; }
   .welcome .btn {
     text-decoration: none; }
+
+.alert.alert-danger {
+  background-color: #3d3d3d; }
+
+.stripe-button-el {
+  background-image: none !important; }
+  .stripe-button-el span {
+    background-color: white !important;
+    background-image: none !important;
+    background: white !important;
+    border: 2px solid white !important;
+    color: #554a6c !important;
+    padding: 2px 15px !important;
+    height: auto !important; }
+
+.checkoutView .button > .inner > button {
+  background-color: white !important;
+  background-image: none !important;
+  background: white !important;
+  border: 2px solid white !important;
+  color: #554a6c !important;
+  padding: 2px 15px !important;
+  height: auto !important; }
 
 .admin-menu,
 .user-menu {
@@ -74,7 +118,7 @@ p.lead {
 
 .charity {
   margin: 15px 15px 30px;
-  padding: 0 0 45px;
+  padding: 0 0 30px;
   overflow: hidden;
   border: 1px solid white;
   text-align: center;
@@ -88,10 +132,24 @@ p.lead {
     border-radius: 15px 15px 0 0; }
     .charity .charity-logo img {
       max-width: 200px; }
-  .charity .charity-description p {
-    padding: 0 15px; }
+  .charity .charity-description {
+    padding-bottom: 15px; }
+    .charity .charity-description p {
+      padding: 0 15px; }
   .charity .vote {
     padding: 7px 45px;
-    font-size: 18px; }
+    font-size: 18px;
+    text-decoration: none; }
+  .charity .vote-tally {
+    color: white;
+    border: 2px solid white;
+    border-radius: 3px; }
+
+.admin-edit {
+  position: absolute;
+  top: 5px;
+  right: 20px; }
+  .admin-edit a {
+    margin-right: 5px; }
 
 /*# sourceMappingURL=app.css.map */

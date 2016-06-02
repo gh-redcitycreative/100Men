@@ -2,8 +2,17 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
+    <div class="row register-logo">
+            <div class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-5 welcomelogo">
+                <img src="/images/100-Men-Logo-White.png" alt="#">
+            </div>
+        </div>
+    <div class="row welcome">
         <div class="col-md-8 col-md-offset-2">
+            <p class="lead text-center">
+            Become one of the 100 Men (or more) Who Give a Damn about the Calgary community and make an immediate, direct and positive difference in the lives of our neighbours and our community. Sign up now and join us in making a powerful impact!    
+            </p>
+            <blockquote><p>Our mission is to build an army of men who give a damn about the community and each other.</p></blockquote>
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">

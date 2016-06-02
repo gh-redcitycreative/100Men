@@ -10,24 +10,23 @@ header{
 	margin-bottom:50px;
 }
 main{
-	//main content
+	padding-bottom:50px;
 }
 h1, h2, h3, h4, h5, h6, p{
 	color:white;
 }
 .btn-primary{
-
-background-color:white;
+	background-color:white;
 	color:$purple;
 	border:2px solid white;
+	transition:.2s
 }
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active{
-		background-color:$purple;
+	background-color:$purple;
 	border:2px solid white;
 	color:white;
-
 }
 
 
@@ -41,7 +40,28 @@ a{
 	text-decoration: underline;
 }
 
+.panel{
+	color:purple;
+	.btn-primary{
+		background-color:$purple;
+		border:2px solid white;
+		color:white;
 
+	}
+	.btn-primary:hover{
+		background-color:white;
+		color:$purple;
+		border:2px solid $purple;
+	}
+	a.btn-link{
+		color:$purple;
+		text-decoration: underline;
+	}
+}
+
+.register-logo{
+	padding-top:30px;
+}
 .welcome{
 
 	padding:50px 0 50px;
@@ -56,6 +76,46 @@ a{
 		text-decoration: none;
 	}
 }
+
+.alert.alert-danger{
+	background-color: $grey;
+}
+
+
+
+//stripe button
+
+.stripe-button-el{
+	background-image: none !important;
+	span{
+		background-color:white !important;
+		background-image: none !important;
+		background: white !important;
+		border:2px solid white !important;
+		color:$purple !important;
+		padding:2px 15px !important;
+		height:auto !important;
+	}
+}
+
+.checkoutView{
+	.button>.inner>button{
+		background-color:white !important;
+		background-image: none !important;
+		background: white !important;
+		border:2px solid white !important;
+		color:$purple !important;
+		padding:2px 15px !important;
+		height:auto !important;
+	}
+}
+.iconTick{
+
+}
+
+
+
+
 
 
 

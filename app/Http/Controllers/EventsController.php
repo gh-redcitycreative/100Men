@@ -31,7 +31,7 @@ class EventsController extends Controller
 
     public function current()
     {
-        $user  = \Auth::User()->id;
+        $user  = \Auth::User();
         $current = Current::first();
         $currentEvent = Event::find($current->event_id);
         return view('events.current', compact('currentEvent', 'user'));  

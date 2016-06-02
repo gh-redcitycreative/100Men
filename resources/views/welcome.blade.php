@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="welcome">
+    <div class="welcome container">
         <div class="row">
             <div class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-5 welcomelogo">
                 <img src="/images/100-Men-Logo-White.png" alt="#">

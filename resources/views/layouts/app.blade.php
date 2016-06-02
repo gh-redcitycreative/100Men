@@ -27,7 +27,7 @@
 
     </style>
 </head>
-<body id="app-layout">
+<body id="app-layout" class="">
     @if(Auth::guest())
     @elseif (Auth::user()->admin == 'admin')
 

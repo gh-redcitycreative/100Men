@@ -26,7 +26,10 @@ class Event extends Model
     {
         return $this->hasManyThrough('App\Vote', 'App\Charity');
     }
-  
+    public function checkin()
+    {
+        return $this->hasMany('App\Checkin');
+    }
     
   
 }

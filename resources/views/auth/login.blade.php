@@ -2,8 +2,10 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
+
+    <div class="row welcome">
         <div class="col-md-8 col-md-offset-2">
+        <p class="lead text-center">Please login to proceed to tonights event <br>details and voting for a charity</p>
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">
