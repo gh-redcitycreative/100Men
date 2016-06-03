@@ -25,6 +25,16 @@ Route::group(['middleware' => 'web'], function () {
         'uses' => 'EventsController@current'
     ]);
 
+    Route::get('api/tally-results', [
+        'uses' => 'EventsController@tally'
+    ]);
+
+    Route::get('events/live-results', [
+        'middleware' => 'admin',
+        'uses' => 'EventsController@results'
+    ]);
+
+
      Route::get('donate', [
         'middleware' => 'auth',
         'uses' => 'DonationController@donate'

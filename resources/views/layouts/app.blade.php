@@ -143,6 +143,8 @@
 
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.24/vue.js"></script>
+<script src="/js/votes.js"></script>
 
     
      <script src="{{ asset('pickadate/compressed/picker.js') }}"></script>
