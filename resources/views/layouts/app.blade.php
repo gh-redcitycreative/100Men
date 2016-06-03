@@ -27,11 +27,11 @@
 
     </style>
 </head>
-<body id="app-layout">
+<body id="app-layout" class=@if(Auth::guest()) @elseif (Auth::user()->admin == 'admin')'admin' @endif>
     @if(Auth::guest())
     @elseif (Auth::user()->admin == 'admin')
 
-        <nav class="navbar admin-menu navbar-inverse navbar-static-top">
+        <nav class="navbar admin-menu navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -143,8 +143,8 @@
 
 
 
-
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.24/vue.js"></script>
+   
      <script src="{{ asset('pickadate/compressed/picker.js') }}"></script>
      <script src="{{ asset('pickadate/compressed/picker.date.js') }}"></script>
 

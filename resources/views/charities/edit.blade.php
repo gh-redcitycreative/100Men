@@ -4,7 +4,7 @@
 <div class="container">
 
 	<div class="row">
-		<div class="col col-xs-9">
+		<div class="col col-xs-12">
 			<h3>Edit Charity Information</h3>
 			<p><a href="/events/{{ $charity->event->id }}">Back to Event</a></p>
 			<form method="POST" action="" >

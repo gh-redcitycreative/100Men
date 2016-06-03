@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Checkin extends Model
 {
-    public function current()
+    public function event()
 	{
-	   	return $this->belongsTo('App\Current');
+	   	return $this->belongsTo('App\Event');
 	}
 	public function user()
     {

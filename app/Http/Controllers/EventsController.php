@@ -31,10 +31,32 @@ class EventsController extends Controller
 
     public function current()
     {
-        $user  = \Auth::User()->id;
+        $user  = \Auth::User();
         $current = Current::first();
         $currentEvent = Event::find($current->event_id);
         return view('events.current', compact('currentEvent', 'user'));  
+    }
+    public function tally()
+    {
+        $current = Current::first();
+        $event = Event::find($current->event_id);
+        $charity_one = $event->charities[0]->votes->count();
+        $charity_two = $event->charities[1]->votes->count();
+        $charity_three = $event->charities[2]->votes->count();
+        $charity_total =$event->votes->count();
+      
+        $checked = $event->checkin()->where('checkins.event_id', $event->id)->count();
+        $vote_tally = ['first'=>$charity_one,'second'=> $charity_two, 'third'=>$charity_three, 'total'=>$charity_total, 'checked'=>$checked];
+        return  $vote_tally;
+    }
+
+    public function results()
+    {
+        
+        $current = Current::first();
+        $event = Event::find($current->event_id);
+        $votes = $event->votes->count();
+        return view('events.results',compact('event', 'votes', 'checked'));
     }
 
     public function updateCurrent(Event $event)
