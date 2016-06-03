@@ -149,10 +149,19 @@
      <script src="{{ asset('pickadate/compressed/picker.date.js') }}"></script>
 
         <script type="text/javascript">
+
+        // Date Picker
         $( '#date' ).pickadate({
             formatSubmit : 'yyyy-mm-dd 00:00:00',
             hiddenName: true
         });
+
+        // Alert
+
+        $(".flashBox .exit").click(function(){
+            $(".flashBox").hide();
+        });
+     
       </script>
 
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}

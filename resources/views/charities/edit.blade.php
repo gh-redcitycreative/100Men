@@ -7,7 +7,7 @@
 		<div class="col col-xs-9">
 			<h3>Edit Charity Information</h3>
 			<p><a href="/events/{{ $charity->event->id }}">Back to Event</a></p>
-			<form method="POST" action="/charities/{{ $charity->id }}" >
+			<form method="POST" action="" >
 			{{ method_field('PATCH') }}
 				<div class="form-group">
 					{{ csrf_field() }}

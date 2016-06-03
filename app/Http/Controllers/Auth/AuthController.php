@@ -28,7 +28,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/home';
 
     /**
      * Create a new authentication controller instance.
@@ -49,9 +49,21 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
+            'first_name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
+            'last_name' => 'required',
+            'address' => 'required',
+            'city_town' => 'required',
+            'province' => 'required',
+            'postal_code' => 'required',
+            'phone_number' => 'required',
+            'twitter' => 'required',
+            'referral' => 'required',
+            'info' => 'required',
+            'commitment' => 'required',
+            'community' => 'required',
+            'new_member' => 'required'
         ]);
     }
 
@@ -64,9 +76,21 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'first_name' => $data['first_name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'last_name' => $data['last_name'],
+            'address' => $data['address'],
+            'city_town' => $data['city_town'],
+            'province' => $data['province'],
+            'postal_code' => $data['postal_code'],
+            'phone_number' => $data['phone_number'],
+            'twitter' => $data['twitter'],
+            'referral' => $data['referral'],
+            'info' => $data['info'],
+            'commitment' => $data['commitment'],
+            'community' => $data['community'],
+            'new_member' => $data['new_member'],
         ]);
     }
 }

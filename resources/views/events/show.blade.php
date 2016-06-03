@@ -9,13 +9,14 @@
 			<p> {{ $charity->body }} </p>
 			<p>Total Votes: {{ $charity->votes->count() }}</p>
 	</div>	
+@include ('flash')
 		
 	@endforeach	
 	@if($event->charities->count() < 3)
 		<div class="row">
 			<div class="col-xs-12">
 				<h3> Add a new Charity </h3>
-				<form enctype="multipart/form-data" method="POST" action="/events/{{ $event->id }}/charities">
+				<form enctype="multipart/form-data"  method="POST" action="/events/{{ $event->id }}/charities">
 					<div class="form-group">
 						{{ csrf_field() }}
 						<input class="form-control input-lg" type="text" name="title" placeholder="Charity Name">

@@ -2,7 +2,7 @@
 
 @section('content')
 <h3>Add a New Event</h3>
-		<form method="Post" action="/events/add">
+		<form method="Post" action="/events/addEvent">
 				{{ csrf_field() }}
 				<input class="form-control input-lg"type="text" placeholder="title" name="title">
 				<input class="form-control input-lg"type="text" placeholder="passcode" name="passcode">
@@ -13,15 +13,7 @@
 		</form>
 
 
-		<!-- Date picker scripts -->
-<script>
 
-$(function() {
-	alert("Date");
-    $('#date').pickadate();
-    alert("Date");
-  });   
-</script>
 
 
 @endsection

@@ -23,7 +23,7 @@ class VotesController extends Controller
             $vote->user_id = \Auth::User()->id;
             $charity->addVote($vote);
             $vote->charity_id = $charity->id;  
-	        return redirect('/home');
+	        return redirect('/voted');
         }
         else{
             // flash message

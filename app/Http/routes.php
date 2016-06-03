@@ -30,16 +30,40 @@ Route::group(['middleware' => 'web'], function () {
         'uses' => 'DonationController@donate'
     ]);
 
-
     Route::get('charities/{charity}/voting', [
         'middleware' => 'auth',
-        'uses' => 'VotesController@newVote'
+        'uses' => 'VotesController@newVote',
      ]);
 
-     Route::post('events/{event}/check-in', [
+    Route::post('events/{event}/check-in', [
         'middleware' => 'auth',
         'uses' => 'EventsController@checkIn'
+ 
      ]);
+
+    // flash messages
+     Route::get('voted', function()
+     {
+        Session::flash('status', 'Thanks for voting');
+        return redirect('/home');
+     });
+
+    Route::get('checked-in', function()
+     {
+        Session::flash('status', 'You are checked in');
+        return redirect('/home');
+     });
+
+    Route::get('new-event', function()
+     {
+        Session::flash('status', 'Your new event has been added.');
+        return redirect('/events');
+     });
+
+
+
+
+
 
     // Admin
     Route::get('/dashboard', 'DashboardController@index');
@@ -76,15 +100,35 @@ Route::group(['middleware' => 'web'], function () {
 
 // event add functionality 
 
-    Route::post('events/add', [
+    Route::post('events/addEvent', [
         'middleware' => 'admin',
         'uses' => 'EventsController@addEvent'
     ]);
 
+
+
+    // Event edit functionality 
+    Route::get('events/{event}/edit', [
+        'middleware' => 'admin',
+        'uses' => 'EventsController@editEvent'
+    ]);
+
+    Route::patch('events/{event}', [
+        'middleware' => 'admin',
+        'uses' => 'EventsController@update'
+    ]);
+
+
+    Route::get('events/{event}/delete', [
+        'middleware' => 'admin',
+        'uses' => 'EventsController@delete'
+    ]);
+
+
     //Charity edit functionality 
     Route::get('charities/{charity}/edit', [
         'middleware' => 'admin',
-        'uses' => 'CharitiesController@edit'
+        'uses' => 'CharitiesController@editCharity'
     ]);
     Route::patch('charities/{charity}', [
         'middleware' => 'admin',

@@ -30,8 +30,8 @@ class CharitiesController extends Controller
         $event->addCharity($charity);
 
     	return back();
-    }
-    public function edit(Charity $charity)
+}
+    public function editCharity(Charity $charity)
     { 
     	return view('charities.edit', compact('charity'));
     }

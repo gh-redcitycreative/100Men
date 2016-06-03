@@ -44,28 +44,49 @@ class EventsController extends Controller
         $current->update();
         return back();  
     }
-     public function add()
+
+
+    // add event form
+    public function add()
     {
         return view('events.add');
     }
+    // saving the new event
     public function addEvent(Request $request)
     {
+        // return $request->all();
     	$event = new Event;
         $event->create($request->all());
-        // return $request->all();
+        return redirect('new-event');
+    }
+
+
+    public function editEvent(Event $event)
+    { 
+        return view('events.edit', compact('event'));
+    }   
+    public function update(Request $request, Event $event)
+    {
+        $event->update($request->all()); 
+        return redirect('/events');
+
+    }
+    public function delete(event $event)
+    {
+        $event->delete();
         return back();
     }
 
+
+
      public function checkIn(Request $request, Event $event)
     {
-        // return "cats";
         $checkIn = new CheckIn();
         $checkIn->user_id = \Auth::User()->id;
         $checkIn->event_id = Event::find($event->id)->id;
-        
         $checkIn->save();
 
-        return redirect('/home');
+        return redirect('/checked-in');
 
     }
 }
