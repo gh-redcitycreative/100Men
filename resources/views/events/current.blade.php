@@ -10,13 +10,10 @@
 	</header>
 @endsection
 
-
-
-
-
-
-
 @section('content')
+
+@include ('flash')
+
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
@@ -35,6 +32,7 @@
 					<p class="lead text-center">Here are your nominees, once voting has begun we will display the secret word so that you can submit your vote.</p>					
 				@endif	
 			</div>
+
 		</div>
 		<div class="row">
 			<div class="col-xs-12">
@@ -70,6 +68,10 @@
 			</div>
 		</div>
 	</div>
+
+
+
+	
 
 		
 	@endforeach	

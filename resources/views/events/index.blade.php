@@ -1,12 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
+	
 	<h1>All Events</h1>
+
+@include ('flash')
+
 	@foreach ($events as $event)
 	<div class="event row">
 		<div class="col-xs-6">
-			<h3><a href="/events/{{ $event->id }}" class="current-event">{{ $event->title }}</a></h3>
-			<h3><a href="/events/{{ $event->id }}/tally-results" >show votes</a></h3>
+
+			<h3><a href="/events/{{ $event->id }}" class="current-event">{{ $event->title }}</a>
+			<p>
+			@if($event->id == $currentEvent->id )
+				@else
+					<a role="button" href="/events/{{ $event->id }}/delete" class="btn btn-danger pull-right"> 
+						Delete
+					</a>
+				@endif
+
+				<a role="button" href="/events/{{ $event->id }}/edit" class="btn btn-warning pull-right">
+					Edit
+				</a>
+			</p>
+			</h3>
+
 			<h4 class="text-muted">Event details</h4>
 			<address>
 				<strong>{{ $event->location }}</strong><br> 
