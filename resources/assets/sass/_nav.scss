@@ -2,27 +2,56 @@
 .user-menu{
 	margin-bottom: 0;
 }
+.navbar-default{
+	background-color:white;
+	.navbar-toggle,
+	.navbar-toggle.collapsed{
+		background-color:white;
+		border-width:0px;
+		.icon-bar{
+			background-color:$purple;
+		}
+	} 
+	.navbar-toggle:hover{
+		background-color:lighten($purple, 75%);
+	}
 
+}
+
+
+.navbar-toggle{
+
+}
 .navbar-brand{
 	padding:2px 15px;
 	img{
 		width:45px;
 		height:auto;
 	}
+
 }
 
 body.admin{
-	padding-top:100px;
+	padding-top:80px;
 	.admin-menu{
 		z-index:2000;
+		min-height:20px;
 		.navbar-brand{
-			padding:15px;
+			padding:5px 15px;
 			text-decoration: none;
+			height:20px;
 			
+		}
+		.navbar-toggle{
+			padding:8px;
+			background-color:$grey;
+			margin:0;
+			border-radius: 0;
+			border:0px;
 		}
 
 	}
 	.user-menu{
-		top:50px;
+		top:30px;
 	}
 }

@@ -138,4 +138,20 @@ Route::group(['middleware' => 'web'], function () {
 
     });
 
+    //reports
+
+    Route::get('reports/new-members', [
+        'middleware' => 'admin',
+        'uses' => 'ReportController@export'
+    ]);
+
+    Route::get('reports/attendies', [
+        'middleware' => 'admin',
+        'uses' => 'ReportController@attended'
+    ]);
+
+
+
+
+
 });

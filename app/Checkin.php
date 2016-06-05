@@ -2,6 +2,7 @@
 
 namespace App;
 
+use \App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Checkin extends Model
@@ -10,9 +11,9 @@ class Checkin extends Model
 	{
 	   	return $this->belongsTo('App\Event');
 	}
-	public function user()
+	public function users()
     {
-    	return $this->belongsTo(User::class);
+    	return $this->belongsToMany('App\User');
     }
 
 }

@@ -100,6 +100,18 @@ a {
 .user-menu {
   margin-bottom: 0; }
 
+.navbar-default {
+  background-color: white; }
+  .navbar-default .navbar-toggle,
+  .navbar-default .navbar-toggle.collapsed {
+    background-color: white;
+    border-width: 0px; }
+    .navbar-default .navbar-toggle .icon-bar,
+    .navbar-default .navbar-toggle.collapsed .icon-bar {
+      background-color: #554a6c; }
+  .navbar-default .navbar-toggle:hover {
+    background-color: white; }
+
 .navbar-brand {
   padding: 2px 15px; }
   .navbar-brand img {
@@ -107,14 +119,22 @@ a {
     height: auto; }
 
 body.admin {
-  padding-top: 100px; }
+  padding-top: 80px; }
   body.admin .admin-menu {
-    z-index: 2000; }
+    z-index: 2000;
+    min-height: 20px; }
     body.admin .admin-menu .navbar-brand {
-      padding: 15px;
-      text-decoration: none; }
+      padding: 5px 15px;
+      text-decoration: none;
+      height: 20px; }
+    body.admin .admin-menu .navbar-toggle {
+      padding: 8px;
+      background-color: #3d3d3d;
+      margin: 0;
+      border-radius: 0;
+      border: 0px; }
   body.admin .user-menu {
-    top: 50px; }
+    top: 30px; }
 
 footer {
   background-color: #3d3d3d;

@@ -57,8 +57,8 @@
                                 Reports  <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">New Members</a></li>
-                                    <li><a href="#">All Members</a></li>
+                                    <li><a href="{{ url('/reports/new-members') }}">New Members</a></li>
+                                    <li><a href="{{ url('/reports/attendies') }}">All Members</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -101,7 +101,7 @@
                         <li><a href="{{ url('/login') }}">Members Login</a></li>
                         <li><a href="{{ url('/register') }}">Not a Member Yet?</a></li>
                     @else
-                        <li><a href="/donate">Donate</a></li>
+                        
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
@@ -111,6 +111,7 @@
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
                         </li>
+                        <li><a href="/donate">Donate</a></li>
                         
                     @endif
                 </ul>

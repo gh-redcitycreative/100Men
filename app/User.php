@@ -32,6 +32,11 @@ class User extends Authenticatable
     ];
 
 
+    public function checkin()
+    {
+        return $this->hasMany('App\Checkin');
+    }
+
 
 
 }

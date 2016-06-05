@@ -45,7 +45,7 @@ class EventsController extends Controller
         $charity_three = $event->charities[2]->votes->count();
         $charity_total =$event->votes->count();
       
-        $checked = $event->checkin()->where('checkins.event_id', $event->id)->count();
+        $checked = $event->checkin->count();
         $vote_tally = ['first'=>$charity_one,'second'=> $charity_two, 'third'=>$charity_three, 'total'=>$charity_total, 'checked'=>$checked];
         return  $vote_tally;
     }
