@@ -258,4 +258,42 @@ div.vote-tally {
   .admin-edit a {
     margin-right: 5px; }
 
+#app-layout .registration p {
+  color: #554a6c; }
+
+#app-layout .registration .special {
+  margin-top: 45px; }
+  #app-layout .registration .special p {
+    color: #554a6c;
+    font-size: x-small; }
+  #app-layout .registration .special span {
+    margin: 0 20px 0 10px; }
+
+#app-layout .registration .special.newM {
+  margin-bottom: 45px; }
+
+.flashBG {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999; }
+  .flashBG .flashContainer {
+    position: relative;
+    top: 50px;
+    padding: 10px 0;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: white;
+    border: 2px solid white;
+    z-index: 9999; }
+    .flashBG .flashContainer p {
+      color: #554a6c;
+      font-size: 20px;
+      text-align: center; }
+    .flashBG .flashContainer span img {
+      width: 25px; }
+
 /*# sourceMappingURL=app.css.map */

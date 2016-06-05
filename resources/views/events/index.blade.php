@@ -8,21 +8,13 @@
 
 	@foreach ($events as $event)
 	<div class="event row">
+
+
 		<div class="col-xs-6">
 
-			<h3><a href="/events/{{ $event->id }}" class="current-event">{{ $event->title }}</a>
-			<p>
-			@if($event->id == $currentEvent->id )
-				@else
-					<a role="button" href="/events/{{ $event->id }}/delete" class="btn btn-danger pull-right"> 
-						Delete
-					</a>
-				@endif
 
-				<a role="button" href="/events/{{ $event->id }}/edit" class="btn btn-warning pull-right">
-					Edit
-				</a>
-			</p>
+
+			<h3><a href="/events/{{ $event->id }}" class="current-event">{{ $event->title }}</a>
 			</h3>
 
 			<h4 class="text-muted">Event details</h4>
@@ -44,6 +36,20 @@
 			@endif
 		</div>
 		<div class="col-xs-6">
+
+		<p class="text-right clearfix">
+			@if($event->id == $currentEvent->id )
+				@else
+					<a role="button" href="/events/{{ $event->id }}/delete" class="btn btn-danger pull-right"> 
+						Delete
+					</a>
+				@endif
+
+				<a role="button" href="/events/{{ $event->id }}/edit" class="btn btn-warning pull-right">
+					Edit
+				</a>
+			</p>
+
 			<p class="text-right">
 				@if($event->id == $currentEvent->id )
 					<a href="#" class='btn btn-danger'>Current Event</a><br>
