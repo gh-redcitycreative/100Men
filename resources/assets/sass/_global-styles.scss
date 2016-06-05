@@ -15,6 +15,9 @@ main{
 h1, h2, h3, h4, h5, h6, p{
 	color:white;
 }
+.btn{
+	letter-spacing: 3px;
+}
 .btn-primary{
 	background-color:white;
 	color:$purple;

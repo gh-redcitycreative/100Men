@@ -58,7 +58,7 @@
 			
 			<div class="col-xs-12">
 				@if($currentEvent->votes()->where('votes.user_id', $user->id)->count() == 0)
-					<a class="btn btn-primary vote" type="button" href="/charities/{{ $charity->id }}/voting">Vote</a>
+					<a class="btn btn-secondary vote" type="button" href="/charities/{{ $charity->id }}/voting">Vote!</a>
 
 							
 				@endif
