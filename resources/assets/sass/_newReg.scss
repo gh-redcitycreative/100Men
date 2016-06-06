@@ -1,0 +1,26 @@
+
+#app-layout{
+
+	.registration{
+		p{
+			color:$purple;
+		}
+		.special{
+			margin-top:45px;
+			
+				p{
+					color:$purple;
+					font-size: x-small;
+				}
+				
+				span{
+					margin: 0 20px 0 10px;
+				}
+		}
+		.special.newM{
+			margin-bottom:45px;
+		}
+	}
+}
+
+

@@ -1,22 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row register-logo">
-            <div class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-5 welcomelogo">
-                <img src="/images/100-Men-Logo-White.png" alt="#">
-            </div>
-        </div>
-    <div class="row welcome">
+<div class="container register">
+    <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <p class="lead text-center">
-            Become one of the 100 Men (or more) Who Give a Damn about the Calgary community and make an immediate, direct and positive difference in the lives of our neighbours and our community. Sign up now and join us in making a powerful impact!    
-            </p>
-            <blockquote><p>Our mission is to build an army of men who give a damn about the community and each other.</p></blockquote>
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+        'first_name', 'email', 'password', 'last_name', 'address', 'city_town', 'province', 'postal_code', 'phone_number', 'twitter', 'referral', 'info', 'commitment', 'community', 'new_member',
+                    <form class="form-horizontal registration" role="form" method="POST" action="{{ url('/register') }}">
                         {!! csrf_field() !!}
 
                         <!-- First Name -->
@@ -49,11 +41,12 @@
                         </div>
                         <!-- Email -->
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Which email address shall we use?*
-* Don't worry, we're not going to spam you. We communicate important messages to you via email.</label>
+                            <label class="col-md-4 control-label">Which email address shall we use?</label>
+
                             
                            
                             <div class="col-md-6">
+                            <p>* Don't worry, we're not going to spam you. We communicate important messages to you via email.</p>
                                 <input type="email" class="form-control" name="email" value="{{ old('email') }}">
 
                                 @if ($errors->has('email'))
@@ -202,60 +195,70 @@
                             </div>
                         </div>
                         <!-- Personal info * -->
-                        
+                        <hr/>
 
-                        <div class="form-group{{ $errors->has('info') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">100 Men Who Give a Damn Calgary collects your personal information (including name, address, email address, and phone number) strictly for the purpose of maintaining our membership lists and communicating with our membership. 100 Men Who Give a Damn Calgary will not sell, give, or otherwise share your personal information without your express consent, unless required by law.</label>
+                        <div class="special form-group{{ $errors->has('info') ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">Your Personal Information</label>
+                            <div class="col-md-6">
+                            <p>100 Men Who Give a Damn Calgary collects your personal information (including name, address, email address, and phone number) strictly for the purpose of maintaining our membership lists and communicating with our membership. 100 Men Who Give a Damn Calgary will not sell, give, or otherwise share your personal information without your express consent, unless required by law.</p>
 
-                        <div class="col-md-6">
-                                <input type="radio" value="1" name="info"> Agree
-                                <input type="radio" value="0" name="info">I don't Agree  
+                        <div>
+                                <input type="radio" value="1" name="info"><span>Agree</span>
+                                <input type="radio" value="0" name="info"><span>I don't Agree</span>
                                 @if ($errors->has('info'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('info') }}</strong>
                                     </span>
                                 @endif 
+                                </div>
                             </div>
                         </div>
 
                         <!-- Commitment * -->
-                         <div class="form-group{{ $errors->has('commitment') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">100 Men Is About Commitment*
-I understand I am making a commitment to 100 Men Who Give a Damn – Calgary to make an annual donation of $400 – ($100 at each of four meetings) – given 100% to a local charity or one of its valuable programs that serves the Calgary or Southern Alberta community.</label>
+                         <div class="special form-group{{ $errors->has('commitment') ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">100 Men Is About Commitment</label>
+                            <div class="col-md-6">
+                            <p>100 Men Is About Commitment*
+I understand I am making a commitment to 100 Men Who Give a Damn – Calgary to make an annual donation of $400 – ($100 at each of four meetings) – given 100% to a local charity or one of its valuable programs that serves the Calgary or Southern Alberta community.</p>
 
-                        <div class="col-md-6">
-                                <input type="radio" value="1" name="commitment"> Agree
-                                <input type="radio" value="0" name="commitment">I don't Agree  
+                        <div>
+                                <input type="radio" value="1" name="commitment"><span>Agree</span> 
+                                <input type="radio" value="0" name="commitment"><span>I don't Agree</span> 
                                 @if ($errors->has('commitment'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('commitment') }}</strong>
                                     </span>
                                 @endif 
+                                </div>
                             </div>
                         </div>
                           <!-- Community * -->
-                        <div class="form-group{{ $errors->has('community') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">100 Men is about community 
-I agree to fulfill my donation commitment even if I did not vote for the charity selected by majority vote and that if I cannot attend a meeting I will ensure I will make the donation through other means (online, mail, or provide cheque with to another member)</label>
+                        <div class="special form-group{{ $errors->has('community') ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">100 Men is About Community</label>
+                             <div class="col-md-6">
+                            <p>100 Men is about community 
+I agree to fulfill my donation commitment even if I did not vote for the charity selected by majority vote and that if I cannot attend a meeting I will ensure I will make the donation through other means (online, mail, or provide cheque with to another member)</p>
 
-                        <div class="col-md-6">
-                                <input type="radio" value="1" name="community"> Agree
-                                <input type="radio" value="0" name="community">I don't Agree  
+
+                        <div>
+                                <input type="radio" value="1" name="community"><span>Agree</span>
+                                <input type="radio" value="0" name="community"><span>I don't Agree</span>
                                 @if ($errors->has('community'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('community') }}</strong>
                                     </span>
                                 @endif 
+                                </div>
                             </div>
                         </div>
-
+                          <hr/>
                         <!-- New Member? * -->
-                        <div class="form-group{{ $errors->has('community') ? ' has-error' : '' }}">
+                        <div class="special newM form-group{{ $errors->has('community') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">New Member?</label>
 
                         <div class="col-md-6">
-                                <input type="radio" value="1" name="new_member"> Agree
-                                <input type="radio" value="0" name="new_member">I don't Agree  
+                                <input type="radio" value="1" name="new_member"><span>Agree</span>
+                                <input type="radio" value="0" name="new_member"><span>I don't Agree</span>
                                 @if ($errors->has('new_member'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('new_member') }}</strong>
