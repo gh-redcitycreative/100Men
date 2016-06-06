@@ -1,13 +1,10 @@
 @extends('layouts.app')
 
 @section('header')
-   <header>
-        <div class="container">
-
-			<h1>{{ $currentEvent->title }}</h1>
-			<h4 class=page-sub-title>Charity Nominees</h4>
-		</div>
-	</header>
+    <div class="container">
+		<h1>{{ $currentEvent->title }}</h1>
+		<h4 class=page-sub-title>Charity Nominees</h4>
+	</div>
 @endsection
 
 @section('content')
@@ -43,7 +40,14 @@
 		<div class="row ">
 			<div class="col-xs-12 col-sm-3 charity-logo">
 				@if (Auth::user()->admin == 'admin')
-					<p class="admin-edit"><a href="/charities/{{ $charity->id }}/delete" class="btn btn-danger pull-right"> Delete</a><a href="/charities/{{ $charity->id }}/edit" class="btn btn-warning pull-right" >Edit</a></p> 
+				<div class="admin-options">
+					<p class="admin-gear"><i class="fa fa-gear"></i></p>
+					<div class="admin-show">
+						<p class="text-right">
+							<a href="/charities/{{ $charity->id }}/delete" class="btn btn-danger pull-right"> Delete</a><a href="/charities/{{ $charity->id }}/edit" class="btn btn-warning pull-right" >Edit</a>
+						</p> 
+					</div>
+				</div>
 				@endif			
 				<img src='{{ asset($charity->thumbnail) }}'>
 

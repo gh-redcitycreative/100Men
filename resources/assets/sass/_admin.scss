@@ -7,8 +7,97 @@
 	}
 }
 
-body.admin{
+body.admin.backend{
+	background-color:white;
+	color:$dk-purple;
+	h2, h3, h4, h5, h6, p, a{
+		color:$dk-purple;
+	}
+	.btn{
+		color:white;
+	}
+	.btn-secondary{
+		color:white;
+	}
+	.btn-secondary:hover{
+		color:$dk-purple;
+	}
+	.btn{
+		text-decoration: none;
+	}
 
+	main{
+		.container{
+			hr:last-child{
+				display: none;
+			}
+		}
+	}
+	.event{
+		position:relative;
+	}
+	.charity{
+		text-align:left;
+		margin:0;
+	}
 	
+
 }
 
+
+
+//admin edit box
+
+.admin-options{
+		position:absolute;
+		right:15px; ;
+		width:45px;
+		padding:0;
+		top:20px;
+		.admin-gear{
+			background-color:$purple;
+			border:2px solid white;
+			color:white;
+			font-size:18px;
+			width:45px;
+			height:45px;
+			padding:9px 0;
+			text-align: center;
+			cursor:pointer;
+			z-index:100;
+			i{
+				color:white;
+			}
+		}
+		.admin-show{
+			display:none;
+			opacity:0;
+			position:absolute;
+			background-color:white;
+			top:0;
+			right:45px;
+
+			padding:15px 15px;
+			transition:opacity .2s;
+			border:1px solid rgba(0,0,0,0.2);
+			z-index:100;
+			.btn{
+				margin-bottom:5px;
+			}
+			.btn:last-child{
+				margin-bottom:0;
+			}
+			hr{
+				margin:15px -15px;
+			}
+			p{
+				margin-bottom:0;
+			}
+		}
+	}
+	.admin-options:hover{
+		.admin-show{
+			display:block;
+			opacity:1;
+		}
+	}

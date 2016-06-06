@@ -27,7 +27,7 @@
 
     </style>
 </head>
-<body id="app-layout" class=@if(Auth::guest()) @elseif (Auth::user()->admin == 'admin')'admin ' @endif>
+<body id="app-layout" class='admin backend'>
     @if(Auth::guest())
     @elseif (Auth::user()->admin == 'admin')
 
