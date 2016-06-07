@@ -28,8 +28,8 @@
 						</form>		
 					</div>
 				@else
-					<h2 class="lead">Thank you for coming <br>this evening!</h2>
-					<p class="lead text-center">Here are your nominees, once voting has begun we will display the secret word so that you can submit your vote.</p>					
+					<h2 class="lead">Here Are Your Nominees</h2>
+					<p class="lead text-center">Once voting has begun we will display the secret word so that you can submit your vote.</p>					
 				@endif	
 			</div>
 

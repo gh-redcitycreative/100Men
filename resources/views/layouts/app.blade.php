@@ -49,7 +49,6 @@
                 
                 <div class="collapse navbar-collapse" id="app-admin-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
                         <li><a href="{{ url('/events') }}">Events</a></li>
                         <li><a href="{{ url('events/add') }}">Add Event +</a></li>
                         <li class="dropdown">
@@ -104,7 +103,7 @@
                         
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                                {{ Auth::user()->first_name }}{{ Auth::user()->last_name }} <span class="caret"></span>
                             </a>
     
                             <ul class="dropdown-menu" role="menu">
@@ -133,7 +132,7 @@
             <a href="http://facebook.com"><i class="fa fa-twitter" aria-hidden="true"></i></i></a> |
             <a href="http://facebook.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
         </div>
-        <p id=siteby >site by: <a href="www.redcitycreative.com">RedCity Creative</a>
+        <p id=siteby>Website By: <a href="www.redcitycreative.com"><img src="/images/RCC_Footer.jpeg" style="width:100px;" /></a>
     </footer>
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

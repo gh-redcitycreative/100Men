@@ -7,7 +7,6 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
-        'first_name', 'email', 'password', 'last_name', 'address', 'city_town', 'province', 'postal_code', 'phone_number', 'twitter', 'referral', 'info', 'commitment', 'community', 'new_member',
                     <form class="form-horizontal registration" role="form" method="POST" action="{{ url('/register') }}">
                         {!! csrf_field() !!}
 
@@ -40,13 +39,10 @@
                             </div>
                         </div>
                         <!-- Email -->
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Which email address shall we use?</label>
+                        <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label class="col-md-4 control-label">Which email address shall we use? <p class="small-txt">Don't worry, we're not going to spam you. We communicate important messages to you via email.</p></label> 
 
-                            
-                           
                             <div class="col-md-6">
-                            <p>* Don't worry, we're not going to spam you. We communicate important messages to you via email.</p>
                                 <input type="email" class="form-control" name="email" value="{{ old('email') }}">
 
                                 @if ($errors->has('email'))
@@ -121,7 +117,7 @@
                         <div class="col-md-6">
                                 <select id="province" name="province" class="form-control">
                                     @foreach (App\Http\Utilities\Province::all() as $province)
-                                        <option value="{{ $province }}"></option>
+                                        <option value="{{ $province }}">{{ $province }}</option>
                                     @endforeach
                                 </select>
                                 @if ($errors->has('province'))
@@ -184,7 +180,7 @@
                         <div class="col-md-6">
                                 <select id="province" name="referral" class="form-control">
                                     @foreach (App\Http\Utilities\Referral::all() as $referral)
-                                        <option value="{{ $referral }}"></option>
+                                        <option value="{{ $referral }}">{{ $referral }}</option>
                                     @endforeach
                                 </select>
                                 @if ($errors->has('referral'))
@@ -257,8 +253,8 @@ I agree to fulfill my donation commitment even if I did not vote for the charity
                             <label class="col-md-4 control-label">New Member?</label>
 
                         <div class="col-md-6">
-                                <input type="radio" value="1" name="new_member"><span>Agree</span>
-                                <input type="radio" value="0" name="new_member"><span>I don't Agree</span>
+                                <input type="radio" value="1" name="new_member"><span>Yes</span>
+                                <input type="radio" value="0" name="new_member"><span>No, I'm a returning member.</span>
                                 @if ($errors->has('new_member'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('new_member') }}</strong>
