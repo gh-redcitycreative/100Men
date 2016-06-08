@@ -1,17 +1,42 @@
-@extends('layouts.app')
-
-@section('content')
+@extends('layouts.admin')
+@section('header')
+<div class="container">
 	<h1>{{ $event->title }}</h1>
-	@foreach ($event->charities as $charity)
-		<div class='charity'>
-			<p><a role="button" href="/charities/{{ $charity->id }}/delete" class="btn btn-danger pull-right"> Delete</a><a role='button' href="/charities/{{ $charity->id }}/edit" class="btn btn-warning pull-right" >Edit</a></p>
-			<h4> {{ $charity->title }} </h4>
-			<p> {{ $charity->body }} </p>
-			<p>Total Votes: {{ $charity->votes->count() }}</p>
-	</div>	
-@include ('flash')
-		
-	@endforeach	
+	<h4 class="page-sub-title">Charities</h2>
+</div>
+
+@stop
+@section('content')
+<div class="container">
+	
+		@foreach ($event->charities as $charity)
+		<div class="row">
+			<div class="col-xs-12">
+				<div class=' charity'>
+				<div class="admin-options">
+					<p class="admin-gear"><i class="fa fa-gear"></i></p>
+					<div class="admin-show">
+						<p class="text-right">
+							<a role="button" href="/charities/{{ $charity->id }}/delete" class="btn btn-danger pull-right"> Delete</a><a role='button' href="/charities/{{ $charity->id }}/edit" class="btn btn-warning pull-right" >Edit</a>
+						</p>
+					</div>
+
+
+				</div>
+					<p></p>
+					<h4> {{ $charity->title }} </h4>
+					<p> {{ $charity->body }} </p>
+					<p>Total Votes: {{ $charity->votes->count() }}</p>
+
+			</div>	
+
+		@include ('flash')
+			
+		</div>	
+</div>	
+<hr>
+		@endforeach	
+	
 	@if($event->charities->count() < 3)
 		<div class="row">
 			<div class="col-xs-12">
@@ -30,6 +55,10 @@
 			</div>
 		</div>
 	@endif
+
+</div>
+
+
 @endsection
 
 

@@ -6,8 +6,13 @@ body{
 header{
 	background-color:$grey;
 	color:white;
-	padding:0 0 15px;
 	margin-bottom:50px;
+	.container{
+		padding-bottom: 15px;
+		h1, h4.page-sub-title{
+			color:white !important;
+		}
+	}
 }
 main{
 	padding-bottom:50px;
@@ -20,28 +25,28 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .btn-primary{
 	background-color:white;
-	color:$purple;
+	color:$dk-purple;
 	border:2px solid white;
 	transition:.2s
 }
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active{
-	background-color:$purple;
+	background-color:$dk-purple;
 	border:2px solid white;
 	color:white;
 }
 
 .btn-secondary{
-		background-color:$purple;
+		background-color:$dk-purple;
 		border:2px solid white;
 		color:white;
 		transition:.2s
 	}
 .btn-secondary:hover{
 	background-color:white;
-	color:$purple;
-	border:2px solid $purple;
+	color:$dk-purple;
+	border:2px solid $dk-purple;
 }
 
 

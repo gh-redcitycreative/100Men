@@ -5,8 +5,11 @@ body {
 header {
   background-color: #3d3d3d;
   color: white;
-  padding: 0 0 15px;
   margin-bottom: 50px; }
+  header .container {
+    padding-bottom: 15px; }
+    header .container h1, header .container h4.page-sub-title {
+      color: white !important; }
 
 main {
   padding-bottom: 50px; }
@@ -19,27 +22,27 @@ h1, h2, h3, h4, h5, h6, p {
 
 .btn-primary {
   background-color: white;
-  color: #554a6c;
+  color: #423853;
   border: 2px solid white;
   transition: .2s; }
 
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-  background-color: #554a6c;
+  background-color: #423853;
   border: 2px solid white;
   color: white; }
 
 .btn-secondary {
-  background-color: #554a6c;
+  background-color: #423853;
   border: 2px solid white;
   color: white;
   transition: .2s; }
 
 .btn-secondary:hover {
   background-color: white;
-  color: #554a6c;
-  border: 2px solid #554a6c; }
+  color: #423853;
+  border: 2px solid #423853; }
 
 img {
   width: 100%;
@@ -106,14 +109,32 @@ a {
 .navbar-default {
   background-color: white; }
   .navbar-default .navbar-toggle,
-  .navbar-default .navbar-toggle.collapsed {
+  .navbar-default .navbar-toggle.collapsed,
+  .navbar-default .navbar-toggle:focus {
     background-color: white;
     border-width: 0px; }
     .navbar-default .navbar-toggle .icon-bar,
-    .navbar-default .navbar-toggle.collapsed .icon-bar {
+    .navbar-default .navbar-toggle.collapsed .icon-bar,
+    .navbar-default .navbar-toggle:focus .icon-bar {
       background-color: #554a6c; }
   .navbar-default .navbar-toggle:hover {
     background-color: white; }
+  .navbar-default .navbar-nav {
+    margin: 0 -15px; }
+    .navbar-default .navbar-nav li a {
+      text-transform: uppercase;
+      color: #423853;
+      text-decoration: none; }
+    .navbar-default .navbar-nav li:hover {
+      background-color: #f6f6f6; }
+  .navbar-default .navbar-nav.navbar-right li:last-child {
+    background-color: #423853; }
+    .navbar-default .navbar-nav.navbar-right li:last-child a {
+      color: white; }
+  .navbar-default .navbar-nav.navbar-right .dropdown-menu li {
+    background-color: #f6f6f6; }
+    .navbar-default .navbar-nav.navbar-right .dropdown-menu li a {
+      color: #423853; }
 
 .navbar-brand {
   padding: 2px 15px; }
@@ -129,13 +150,16 @@ body.admin {
     body.admin .admin-menu .navbar-brand {
       padding: 5px 15px;
       text-decoration: none;
-      height: 20px; }
+      height: 20px;
+      color: white; }
     body.admin .admin-menu .navbar-toggle {
-      padding: 8px;
+      padding: 8px 25px;
       background-color: #3d3d3d;
       margin: 0;
       border-radius: 0;
       border: 0px; }
+    body.admin .admin-menu .navbar-collapse a {
+      color: white; }
   body.admin .user-menu {
     top: 30px; }
 
@@ -165,10 +189,9 @@ p.lead {
   padding: 0 0 30px;
   overflow: hidden;
   text-align: center;
-  background-color: white;
-  box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.8); }
+  background-color: white; }
   .charity h4, .charity h5, .charity p, .charity a {
-    color: #554a6c; }
+    color: #423853; }
   .charity h4 {
     text-transform: uppercase; }
   .charity .charity-logo {
@@ -189,9 +212,9 @@ p.lead {
     font-size: 18px;
     text-decoration: none;
     color: white;
-    border-color: #554a6c; }
+    border-color: #423853; }
   .charity .vote:hover {
-    color: #554a6c; }
+    color: #423853; }
   .charity .vote-tally {
     color: white;
     border: 2px solid white;
@@ -257,6 +280,70 @@ div.vote-tally {
   right: 20px; }
   .admin-edit a {
     margin-right: 5px; }
+
+body.admin.backend {
+  background-color: white;
+  color: #423853; }
+  body.admin.backend h2, body.admin.backend h3, body.admin.backend h4, body.admin.backend h5, body.admin.backend h6, body.admin.backend p, body.admin.backend a {
+    color: #423853; }
+  body.admin.backend .btn {
+    color: white; }
+  body.admin.backend .btn-secondary {
+    color: white; }
+  body.admin.backend .btn-secondary:hover {
+    color: #423853; }
+  body.admin.backend .btn {
+    text-decoration: none; }
+  body.admin.backend main .container hr:last-child {
+    display: none; }
+  body.admin.backend .event {
+    position: relative; }
+  body.admin.backend .charity {
+    text-align: left;
+    margin: 0; }
+
+.admin-options {
+  position: absolute;
+  right: 15px;
+  width: 45px;
+  padding: 0;
+  top: 20px; }
+  .admin-options .admin-gear {
+    background-color: #554a6c;
+    border: 2px solid white;
+    color: white;
+    font-size: 18px;
+    width: 45px;
+    height: 45px;
+    padding: 9px 0;
+    text-align: center;
+    cursor: pointer;
+    z-index: 100; }
+    .admin-options .admin-gear i {
+      color: white; }
+  .admin-options .admin-show {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    right: 45px;
+    padding: 15px 15px;
+    transition: opacity .2s;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    z-index: 100; }
+    .admin-options .admin-show .btn {
+      margin-bottom: 5px; }
+    .admin-options .admin-show .btn:last-child {
+      margin-bottom: 0; }
+    .admin-options .admin-show hr {
+      margin: 15px -15px; }
+    .admin-options .admin-show p {
+      margin-bottom: 0; }
+
+.admin-options:hover .admin-show {
+  display: block;
+  opacity: 1; }
 
 #app-layout .registration p {
   color: #554a6c; }

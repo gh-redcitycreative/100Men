@@ -5,7 +5,8 @@
 .navbar-default{
 	background-color:white;
 	.navbar-toggle,
-	.navbar-toggle.collapsed{
+	.navbar-toggle.collapsed,
+	.navbar-toggle:focus{
 		background-color:white;
 		border-width:0px;
 		.icon-bar{
@@ -15,7 +16,35 @@
 	.navbar-toggle:hover{
 		background-color:lighten($purple, 75%);
 	}
-
+	.navbar-nav{
+		margin:0 -15px;
+		li{
+			a{
+				text-transform: uppercase;
+				color:$dk-purple;
+				text-decoration: none;
+			}
+		}
+		li:hover{
+			background-color:#f6f6f6;
+		}
+	}
+	.navbar-nav.navbar-right{
+		li:last-child{
+			background-color: #423853;
+			a{
+				color:white;
+			}	
+		}
+		.dropdown-menu{
+			li{
+				background-color:#f6f6f6;
+				a{
+					color:$dk-purple;
+				}
+			}
+		}
+	}
 }
 
 
@@ -36,18 +65,27 @@ body.admin{
 	.admin-menu{
 		z-index:2000;
 		min-height:20px;
+		a{
+
+		}
 		.navbar-brand{
 			padding:5px 15px;
 			text-decoration: none;
 			height:20px;
+			color:white;
 			
 		}
 		.navbar-toggle{
-			padding:8px;
+			padding:8px 25px;
 			background-color:$grey;
-			margin:0;
+			margin:0 ;
 			border-radius: 0;
 			border:0px;
+		}
+		.navbar-collapse{
+			a{
+				color:white;
+			}
 		}
 
 	}

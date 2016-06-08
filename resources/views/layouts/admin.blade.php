@@ -27,7 +27,7 @@
 
     </style>
 </head>
-<body id="app-layout" class=@if(Auth::guest()) @elseif (Auth::user()->admin == 'admin')'admin ' @endif>
+<body id="app-layout" class='admin backend'>
     @if(Auth::guest())
     @elseif (Auth::user()->admin == 'admin')
 
@@ -49,6 +49,7 @@
                 
                 <div class="collapse navbar-collapse" id="app-admin-collapse">
                     <ul class="nav navbar-nav">
+                        <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
                         <li><a href="{{ url('/events') }}">Events</a></li>
                         <li><a href="{{ url('/events/add') }}">Add Event +</a></li>
                         <li><a href="{{ url('/events/live-results') }}">Live Results</a></li>
@@ -104,7 +105,7 @@
                         
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->first_name }}{{ Auth::user()->last_name }} <span class="caret"></span>
+                                {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
     
                             <ul class="dropdown-menu" role="menu">
@@ -127,11 +128,11 @@
     <footer>
         <p>100Men YYC &copy; {{ date("Y") }} </p>
         <div class="socials">
-            <a href="http://facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></i></a> |
-            <a href="http://facebook.com"><i class="fa fa-twitter" aria-hidden="true"></i></i></a> |
-            <a href="http://facebook.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="http://facebook.com">facebook</a> |
+            <a href="http://facebook.com">twitter</a> |
+            <a href="http://facebook.com">instagram</a>
         </div>
-        <p id=siteby>Website By: <a href="www.redcitycreative.com"><img src="/images/RCC_Footer.jpeg" style="width:100px;" /></a>
+        <p id=siteby >site by: <a href="www.redcitycreative.com">RedCity Creative</a>
     </footer>
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
