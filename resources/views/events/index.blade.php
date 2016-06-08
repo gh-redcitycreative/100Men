@@ -23,12 +23,16 @@
 				</address>
 				<h4><a href="/events/{{ $event->id }}" class="current-event">Charities</a></h4>
 				@if(count($event->charities) > 0)
+				<ol class="charity-list">
 					@foreach($event->charities as $charity)
-							<p>{{ $charity->title}}</p>
+							<li>{{ $charity->title}}</li>
 					@endforeach
+				</ol>
+					
 					@if(count($event->charities) < 3)
-						<p><a href="/events/{{ $event->id }}" class="current-event">Add More Charities</a></p>
+						<p><a href="/events/{{ $event->id }}" class=" btn btn-secondary current-event">Add More Charities <i class="fa fa-plus"></i></a></p>
 					@endif
+					
 				@else
 					<p class="text-muted">No Charities have been added to event</p>
 					<p><a href="/events/{{ $event->id }}" class="current-event">Add Charities</a></p>	

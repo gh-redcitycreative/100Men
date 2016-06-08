@@ -8,8 +8,12 @@
 @stop
 @section('content')
 <div class="container">
-	
-		@foreach ($event->charities as $charity)
+	<div class="row">
+		<div class="col-xs-12">
+			<p><a href="/events" class="btn btn-secondary"><i class="fa fa-angle-left "></i> Return to Events</a></p>
+		</div>
+	</div>
+	@foreach ($event->charities as $charity)
 		<div class="row">
 			<div class="col-xs-12">
 				<div class=' charity'>
@@ -45,11 +49,13 @@
 					<div class="form-group">
 						{{ csrf_field() }}
 						<input class="form-control input-lg" type="text" name="title" placeholder="Charity Name">
+						<br>
 						<input class="form-control input-lg" type="file" name="thumbnail">
+						<br>
 						<textarea class="form-control input-lg" name="body" id="" cols="30" rows="10" placeholder="Charity Description"></textarea>
 					</div>
 					<div class="form-group">
-						<button type="submit" class="btn btn-primary">Add Charity</button>
+						<button type="submit" class="btn btn-secondary">Add Charity</button>
 					</div>
 				</form>			
 			</div>
