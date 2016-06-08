@@ -1,3 +1,26 @@
+$('.passcode-show-1').click(function(){
+	$('.passcode-show-1').hide();
+	console.log('hit that button');
+	$('.passcode-1').show();
+});
+
+$('.passcode-show-2').click(function(){
+	$('.passcode-show-2').hide();
+	console.log('hit that button');
+	$('.passcode-2').show();
+});
+
+
+$('.passcode-show-3').click(function(){
+	$('.passcode-show-3').hide()
+	console.log('hit that button');
+	$('.passcode-3').show();
+});
+
+
+
+
+
 $('.vote-tally .btn').click(function(){
 
 	$('.vote-tally .btn').hide();

@@ -54,6 +54,15 @@ p.lead{
 	.vote:hover{
 		color:$dk-purple;
 	}
+
+	.passcode{
+		padding:0 15px;
+	}
+	.passcode-input{
+		width:70%;
+		margin:0 auto;
+	}
+
 	.vote-tally{
 		color:white;
 		border:2px solid white;

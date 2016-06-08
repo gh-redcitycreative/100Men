@@ -216,6 +216,11 @@ p.lead {
     border-color: #423853; }
   .charity .vote:hover {
     color: #423853; }
+  .charity .passcode {
+    padding: 0 15px; }
+  .charity .passcode-input {
+    width: 70%;
+    margin: 0 auto; }
   .charity .vote-tally {
     color: white;
     border: 2px solid white;

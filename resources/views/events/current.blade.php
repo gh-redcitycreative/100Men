@@ -25,8 +25,8 @@
 						</form>		
 					</div>
 				@else
-					<h2 class="lead">Thank you for coming <br>this evening!</h2>
-					<p class="lead text-center">Here are your nominees, once voting has begun we will display the secret word so that you can submit your vote.</p>					
+					<h2 class="lead">Here are Your Charitable Nominees</h2>
+					<p class="lead text-center">Once voting has begun we will display the secret word so that you can submit your vote.</p>					
 				@endif	
 			</div>
 
@@ -34,7 +34,7 @@
 		<div class="row">
 			<div class="col-xs-12">
 				
-	@foreach ($currentEvent->charities as $charity)
+	@foreach ($currentEvent->charities as $key => $charity)
 	
 	<div class='charity'>
 		<div class="row ">
@@ -60,17 +60,26 @@
 				<p > {{ $charity->body }} </p>
 			</div>
 			<!-- button for voting  -->
-			
-			<div class="col-xs-12">
-				@if($currentEvent->votes()->where('votes.user_id', $user->id)->count() == 0)
-					<a class="btn btn-secondary vote" type="button" href="/charities/{{ $charity->id }}/voting">Vote!</a>
+			@if($currentEvent->votes()->where('votes.user_id', $user->id)->count() == 0)
+				<div class="col-xs-12">
+					<button class="btn btn-secondary passcode-show-{{$key+1}}">Vote!</button>
+					<div class="passcode passcode-{{$key+1}}" style="display:none;" >
+						<h4>Almost there brah!</h4>
+						<p>Enter the passcode to submit your vote!</p>
+						<form method="POST" action="/charities/{{ $charity->id }}/createVote">
+							<div class="form-group">
+								{{ csrf_field() }}
+								<input class="form-control passcode-input" type="text" name="passcode" placeholder="passcode">
+								<br>
+								<button type="submit" class="btn btn-secondary">Submit Vote</button>
+							</div>
+						</form>
+					</div>
 
-							
-				@endif
-				@if($charity->votes()->where('votes.user_id', $user->id)->count() > 0)
-					<p>Thanks {{$user->name }}!</p>	
-				@endif
-			</div>
+
+				</div>
+				
+			@endif
 		</div>
 	</div>
 
@@ -89,5 +98,12 @@
 
 @endsection
 
+
+@section('scripts')
+
+	 <script src="/js/votes.js"></script>
+
+
+@endsection
 
                    
