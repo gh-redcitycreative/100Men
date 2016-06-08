@@ -12,7 +12,8 @@ header {
       color: white !important; }
 
 main {
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  min-height: 500px; }
 
 h1, h2, h3, h4, h5, h6, p {
   color: white; }
@@ -53,7 +54,7 @@ a {
   text-decoration: underline; }
 
 .panel {
-  color: purple; }
+  color: #423853; }
   .panel .btn-primary {
     background-color: #554a6c;
     border: 2px solid white;
@@ -248,9 +249,6 @@ div.vote-tally {
     width: 50px;
     margin-top: -7px; }
   .vote-tally .votes {
-    width: 100%; }
-  .vote-tally h2,
-  .vote-tally .progress {
     width: 80%;
     margin: 0 auto; }
   .vote-tally h2 {
@@ -286,6 +284,9 @@ body.admin.backend {
   color: #423853; }
   body.admin.backend h2, body.admin.backend h3, body.admin.backend h4, body.admin.backend h5, body.admin.backend h6, body.admin.backend p, body.admin.backend a {
     color: #423853; }
+  body.admin.backend #edit-image {
+    margin: 15px 0;
+    width: 75px; }
   body.admin.backend .btn {
     color: white; }
   body.admin.backend .btn-secondary {
@@ -301,6 +302,8 @@ body.admin.backend {
   body.admin.backend .charity {
     text-align: left;
     margin: 0; }
+  body.admin.backend footer p, body.admin.backend footer a {
+    color: white; }
 
 .admin-options {
   position: absolute;
@@ -344,5 +347,46 @@ body.admin.backend {
 .admin-options:hover .admin-show {
   display: block;
   opacity: 1; }
+  .admin-options:hover .admin-show a {
+    color: white;
+    text-decoration: none; }
+
+#app-layout .registration p {
+  color: #554a6c; }
+
+#app-layout .registration .special {
+  margin-top: 45px; }
+  #app-layout .registration .special p {
+    color: #554a6c;
+    font-size: x-small; }
+  #app-layout .registration .special span {
+    margin: 0 20px 0 10px; }
+
+#app-layout .registration .special.newM {
+  margin-bottom: 45px; }
+
+.flashBG {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999; }
+  .flashBG .flashContainer {
+    position: relative;
+    top: 50px;
+    padding: 10px 0;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: white;
+    border: 2px solid white;
+    z-index: 9999; }
+    .flashBG .flashContainer p {
+      color: #554a6c;
+      font-size: 20px;
+      text-align: center; }
+    .flashBG .flashContainer span img {
+      width: 25px; }
 
 /*# sourceMappingURL=app.css.map */

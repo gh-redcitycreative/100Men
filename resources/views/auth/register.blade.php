@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
-        'first_name', 'email', 'password', 'last_name', 'address', 'city_town', 'province', 'postal_code', 'phone_number', 'twitter', 'referral', 'info', 'commitment', 'community', 'new_member',
+     
                     <form class="form-horizontal registration" role="form" method="POST" action="{{ url('/register') }}">
                         {!! csrf_field() !!}
 

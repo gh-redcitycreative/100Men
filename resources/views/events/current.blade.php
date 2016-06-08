@@ -44,7 +44,8 @@
 					<p class="admin-gear"><i class="fa fa-gear"></i></p>
 					<div class="admin-show">
 						<p class="text-right">
-							<a href="/charities/{{ $charity->id }}/delete" class="btn btn-danger pull-right"> Delete</a><a href="/charities/{{ $charity->id }}/edit" class="btn btn-warning pull-right" >Edit</a>
+							<a href="/charities/{{ $charity->id }}/edit" class="btn btn-warning pull-right" >Edit</a>
+							<a href="/charities/{{ $charity->id }}/delete" class="btn btn-danger pull-right"> Delete</a>
 						</p> 
 					</div>
 				</div>
