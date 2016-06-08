@@ -11,7 +11,7 @@
 
 
 @section('content')
-	<div class="contatiner text-center">
+	<div class="container text-center">
         <div class="row">
             <div class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-5 welcomelogo">
                 <img src="/images/100-Men-Logo-White.png" alt="#">

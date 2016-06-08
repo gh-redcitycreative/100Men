@@ -5,12 +5,27 @@
 		p{
 			color:$purple;
 		}
+
+		#province{
+			option{
+				color:$purple;
+			}	
+			
+		}
+		.small-txt{
+				color:$purple;
+				font-size: x-small;
+				font-weight: 400;
+			}
+			
+
 		.special{
 			margin-top:45px;
 			
 				p{
 					color:$purple;
 					font-size: x-small;
+					font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 				}
 				
 				span{
@@ -22,5 +37,4 @@
 		}
 	}
 }
-
 

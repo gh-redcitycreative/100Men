@@ -22,8 +22,10 @@
 
 </head>
 <body id="app-layout" class=@if(Auth::guest()) @elseif (Auth::user()->admin == 'admin')'admin ' @endif>
+
   
   @include('includes.nav')
+
 
     <header>
         @yield('header')
@@ -31,9 +33,11 @@
     <main>
       @yield('content')
     </main>
+
     
     @include('includes.footer')
     
+
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

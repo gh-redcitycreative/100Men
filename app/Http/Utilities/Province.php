@@ -7,16 +7,16 @@ class Province
 {
 	protected static $provinces = [
 	   "Alberta" 					=> "AB",
-	   "Colombie-Britannique" 		=> "BC",
+	   "British Columbia" 			=> "BC",
 	   "Manitoba" 					=> "MB",
-	   "Nouveau-Brunswick" 			=> "NB",
-	   "Terre-Neuve-et-Labrador" 	=> "NL",
-	   "Nouvelle-Écosse" 			=> "NS",
-	   "Territoires du Nord-Ouest" 	=> "NT",
+	   "New Brunswick" 				=> "NB",
+	   "Newfoundland and Labrador" 	=> "NL",
+	   "Nova Scotia"	 			=> "NS",
+	   "Northwest Territories" 		=> "NT",
 	   "Nunavut" 					=> "NU",
 	   "Ontario" 					=> "ON",
-	   "Île-du-Prince-Édouard" 		=> "PE",
-	   "Québec" 					=> "QC",
+	   "Prince Edward Island" 		=> "PE",
+	   "Quebec" 					=> "QC",
 	   "Saskatchewan" 				=> "SK",
 	   "Yukon"  					=> "YT"
 	];

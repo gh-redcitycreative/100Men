@@ -25,7 +25,9 @@
 						</form>		
 					</div>
 				@else
+
 					<h2 class="lead">Here are Your Charitable Nominees</h2>
+
 					<p class="lead text-center">Once voting has begun we will display the secret word so that you can submit your vote.</p>					
 				@endif	
 			</div>

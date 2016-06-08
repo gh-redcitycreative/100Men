@@ -6,19 +6,17 @@ class Referral
 
 {
 	protected static $referrals = [
-	   "100 Women Calgary",
-	   "Calgary Herald",
-	   "Manitoba",
-	   "Nouveau-Brunswick",
-	   "Terre-Neuve-et-Labrador",
-	   "Nouvelle-Écosse",
-	   "Territoires du Nord-Ouest",
-	   "Nunavut",
-	   "Ontario",
-	   "Île-du-Prince-Édouard",
-	   "Québec",
-	   "Saskatchewan",
-	   "Yukon"
+	   "100 Women Calgary"				=>"1",
+	   "Calgary Herald"					=>"2",
+	   "Calgary Sun"					=>"3",
+	   "Facebook"						=>"4",
+	   "Friends"						=>"5",
+	   "Instagram"						=>"6",				
+	   "Roadsign/Billboard"				=>"7",
+	   "Radio - JackFM"					=>"8",
+	   "Radio - SportsNet 960 The Fan"	=>"9",
+	   "Twitter"						=>"10",
+	   "Other"							=>"11"
 	];
 
 	public static function all()

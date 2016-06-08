@@ -366,11 +366,20 @@ body.admin.backend {
 #app-layout .registration p {
   color: #554a6c; }
 
+#app-layout .registration #province option {
+  color: #554a6c; }
+
+#app-layout .registration .small-txt {
+  color: #554a6c;
+  font-size: x-small;
+  font-weight: 400; }
+
 #app-layout .registration .special {
   margin-top: 45px; }
   #app-layout .registration .special p {
     color: #554a6c;
-    font-size: x-small; }
+    font-size: x-small;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
   #app-layout .registration .special span {
     margin: 0 20px 0 10px; }
 
