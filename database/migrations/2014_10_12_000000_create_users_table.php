@@ -15,11 +15,12 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('first_name');
+            $table->string('last_name');
             $table->string('email')->unique();
             $table->string('password');
             $table->string('admin')->nullable();
 
-            $table->string('last_name')->nullable();
+           
             $table->string('address')->nullable();
             $table->string('city_town')->nullable();
             $table->string('province')->nullable();
@@ -28,10 +29,10 @@ class CreateUsersTable extends Migration
             $table->string('twitter')->nullable();
             $table->string('referral')->nullable();
 
-            $table->string('info')->nullable();
-            $table->string('commitment')->nullable();
-            $table->string('community')->nullable();
-            $table->string('new_member')->nullable();
+            $table->boolean('info')->nullable();
+            $table->boolean('commitment')->nullable();
+            $table->boolean('community')->nullable();
+            $table->boolean('new_member')->nullable();
 
             $table->string('stripe_id')->nullable();
             $table->string('card_brand')->nullable();

@@ -10,7 +10,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>   
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/home') }}">
                         Admin Menu
                     </a>
                 </div>
@@ -18,8 +18,8 @@
                 
                 <div class="collapse navbar-collapse" id="app-admin-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
-                        <li><a href="{{ url('/events') }}">Events</a></li>
+<!--                         <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
+ -->                        <li><a href="{{ url('/events') }}">Events</a></li>
                         <li><a href="{{ url('/events/add') }}">Add Event +</a></li>
                         <li><a href="{{ url('/events/live-results') }}">Live Results</a></li>
                         <li class="dropdown">

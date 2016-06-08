@@ -14,41 +14,48 @@ class ReportController extends Controller
 {
      public function export()
     {
-      // checked in user where event id is current event
-      $current = Current::first();
-      $currentEvent = Event::find($current->event_id);
-      //    $attened = $currentEvent->checkin;
+      $users = User::all();
+     
+      $new_users = User::where('new_member', 0)->get();
 
-      $checked = Checkin::all();
-      $oneCheckin = Event::find($currentEvent->id);
-      $allCheckins =  $oneCheckin->checkin;
-      return $allCheckins;
-              
-      //       $csv = \League\Csv\Writer::createFromFileObject(new \SplTempFileObject());
+      $csv = \League\Csv\Writer::createFromFileObject(new \SplTempFileObject()); 
+      $csv->insertOne(\Schema::getColumnListing('users'));
 
-      //       $csv->insertOne(\Schema::getColumnListing('users'));
+     //return $new_users;
+     
+      foreach ($new_users as $new_user) {
+       // return $new_user;
+        $csv->insertOne($new_user->toArray());
+        $new_user->new_member = 1; 
+        $new_user->update();  
+      }
 
-      //       foreach ($users as $user) {
-      //    $csv->insertOne($user->toArray());
-      // }
+     
+      
+    $csv->output('new-members.csv');
+      
 
-      // $csv->output('users.csv');      
     }
 
     public function attended()
     {
-    	
-      $users = User::all();
-     
+    	$current_event = Current::find(1);
+      //$users = User::all();
+      $check = Checkin::all();
+     $check_ins = Checkin::where('event_id', $current_event->event_id)->get();
+     //return $check;
+     //return $check_in;
+
       $csv = \League\Csv\Writer::createFromFileObject(new \SplTempFileObject());
      
       $csv->insertOne(\Schema::getColumnListing('users'));
      
-      foreach ($users as $user) {
+      foreach ($check_ins as $check_in) {
+        $user = User::find($check_in->user_id);
         $csv->insertOne($user->toArray());
       }
     
-      $csv->output('users.csv');
+      $csv->output('attendies.csv');
     }
 
 
