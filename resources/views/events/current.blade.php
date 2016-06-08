@@ -40,7 +40,7 @@
 	
 	<div class='charity'>
 		<div class="row ">
-			<div class="col-xs-12 col-sm-3 charity-logo">
+			<div class="col-xs-12 charity-logo">
 				@if (Auth::user()->admin == 'admin')
 				<div class="admin-options">
 					<p class="admin-gear"><i class="fa fa-gear"></i></p>
@@ -55,7 +55,7 @@
 				<img src='{{ asset($charity->thumbnail) }}'>
 
 			</div>
-			<div class="col-xs-12 col-sm-9 charity-description">
+			<div class="col-xs-12 charity-description">
 				
 				<h4> {{ $charity->title }} </h4>
 				<h5> <a href="#">www.kickstarter.com</a></h5>

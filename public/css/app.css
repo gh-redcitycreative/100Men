@@ -174,7 +174,12 @@ footer {
     color: white;
     text-decoration: underline; }
   footer .socials {
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    font-size: 36px; }
+    footer .socials a {
+      padding: 0 15px; }
+    footer .socials a:hover {
+      color: white; }
 
 h2.lead {
   font-size: 30px;
@@ -399,7 +404,7 @@ body.admin.backend {
     border: 2px solid white;
     z-index: 9999; }
     .flashBG .flashContainer p {
-      color: #554a6c;
+      color: #423853;
       font-size: 20px;
       text-align: center; }
     .flashBG .flashContainer span img {

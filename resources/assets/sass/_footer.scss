@@ -8,8 +8,16 @@ footer{
 	a{
 		color:white;
 		text-decoration: underline;
+
 	}
 	.socials{
 		margin-bottom: 15px;
+		font-size: 36px;
+		a{
+			padding:0 15px;
+		}
+		a:hover{
+			color:white;
+		}
 	}
 }
