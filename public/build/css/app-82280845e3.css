@@ -299,6 +299,8 @@ body.admin.backend {
     display: none; }
   body.admin.backend .event {
     position: relative; }
+  body.admin.backend .charity-list {
+    margin-bottom: 30px; }
   body.admin.backend .charity {
     text-align: left;
     margin: 0; }

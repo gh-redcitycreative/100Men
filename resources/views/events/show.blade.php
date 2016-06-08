@@ -8,8 +8,12 @@
 @stop
 @section('content')
 <div class="container">
-	
-		@foreach ($event->charities as $charity)
+	<div class="row">
+		<div class="col-xs-12">
+			<p><a href="/events" class="btn btn-secondary"><i class="fa fa-angle-left "></i> Return to Events</a></p>
+		</div>
+	</div>
+	@foreach ($event->charities as $charity)
 		<div class="row">
 			<div class="col-xs-12">
 				<div class=' charity'>

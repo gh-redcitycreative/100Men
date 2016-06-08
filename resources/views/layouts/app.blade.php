@@ -28,10 +28,11 @@
     </style>
 </head>
 <body id="app-layout" class=@if(Auth::guest()) @elseif (Auth::user()->admin == 'admin')'admin ' @endif>
+  
+
     @if(Auth::guest())
     @elseif (Auth::user()->admin == 'admin')
-
-        <nav class="navbar admin-menu navbar-inverse navbar-fixed-top">
+         <nav class="navbar admin-menu navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
 
