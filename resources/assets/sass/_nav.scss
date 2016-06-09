@@ -83,10 +83,15 @@ body.admin{
 			border:0px;
 		}
 		.navbar-collapse{
-			a{
-				color:white;
-			}
-		}
+            a{
+                color:white;
+            }
+            .dropdown-menu{
+                a{
+                    color:white;
+                }
+            }
+        }
 
 	}
 	.user-menu{

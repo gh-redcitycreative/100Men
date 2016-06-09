@@ -52,6 +52,8 @@
 						<br>
 						<input class="form-control input-lg" type="file" name="thumbnail">
 						<br>
+						<input class="form-control input-lg" type="text" name="url" placeholder="Charity Website">
+						<br>
 						<textarea class="form-control input-lg" name="body" id="" cols="30" rows="10" placeholder="Charity Description"></textarea>
 					</div>
 					<div class="form-group">

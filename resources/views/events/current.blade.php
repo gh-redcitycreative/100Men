@@ -58,7 +58,7 @@
 			<div class="col-xs-12 charity-description">
 				
 				<h4> {{ $charity->title }} </h4>
-				<h5> <a href="#">www.kickstarter.com</a></h5>
+				<h5> {{ $charity->url }} </h5>
 				<p > {{ $charity->body }} </p>
 			</div>
 			<!-- button for voting  -->

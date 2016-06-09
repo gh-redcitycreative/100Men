@@ -35,7 +35,7 @@ class CharitiesController extends Controller
     { 
     	return view('charities.edit', compact('charity'));
     }
-    public function update(Request $request, Charity $charity)
+    public function updateCharity(Request $request, Charity $charity)
     {
         $charity->update($request->all()); 
         return back();

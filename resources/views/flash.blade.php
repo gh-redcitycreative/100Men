@@ -1,7 +1,7 @@
 @if (Session::has('status'))
 <div class="flashBox">
 	<div class="flashBG col-xs-12">
-			<div class="flashContainer col-xs-10 col-xs-offset-2">
+			<div class="flashContainer col-xs-10">
 				<p class="col-xs-9 col-xs-offset-1">
 					{{ Session::get('status') }}
 				</p>
