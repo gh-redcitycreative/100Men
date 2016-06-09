@@ -1,0 +1,404 @@
+body {
+  padding-top: 50px;
+  background-color: #554a6c; }
+
+header {
+  background-color: #3d3d3d;
+  color: white;
+  margin-bottom: 50px; }
+  header .container {
+    padding-bottom: 15px; }
+    header .container h1, header .container h4.page-sub-title {
+      color: white !important; }
+
+main {
+  padding-bottom: 50px;
+  min-height: 500px; }
+
+h1, h2, h3, h4, h5, h6, p {
+  color: white; }
+
+.btn {
+  letter-spacing: 3px; }
+
+.btn-primary {
+  background-color: white;
+  color: #423853;
+  border: 2px solid white;
+  transition: .2s; }
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #423853;
+  border: 2px solid white;
+  color: white; }
+
+.btn-secondary {
+  background-color: #423853;
+  border: 2px solid #423853;
+  color: white;
+  transition: .2s; }
+
+.btn-secondary:hover {
+  background-color: white;
+  color: #423853;
+  border: 2px solid #423853; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+a {
+  color: white;
+  text-decoration: underline; }
+
+.panel {
+  color: #423853; }
+  .panel .btn-primary {
+    background-color: #554a6c;
+    border: 2px solid white;
+    color: white; }
+  .panel .btn-primary:hover {
+    background-color: white;
+    color: #554a6c;
+    border: 2px solid #554a6c; }
+  .panel a.btn-link {
+    color: #554a6c;
+    text-decoration: underline; }
+
+.register-logo {
+  padding-top: 30px; }
+
+.welcome {
+  padding: 50px 0 50px;
+  color: white; }
+  .welcome h2 {
+    padding-bottom: 30px; }
+  .welcome p {
+    padding-bottom: 15px; }
+  .welcome .btn {
+    text-decoration: none; }
+
+.alert.alert-danger {
+  background-color: #3d3d3d; }
+
+.stripe-button-el {
+  background-image: none !important; }
+  .stripe-button-el span {
+    background-color: white !important;
+    background-image: none !important;
+    background: white !important;
+    border: 2px solid white !important;
+    color: #554a6c !important;
+    padding: 2px 15px !important;
+    height: auto !important; }
+
+.checkoutView .button > .inner > button {
+  background-color: white !important;
+  background-image: none !important;
+  background: white !important;
+  border: 2px solid white !important;
+  color: #554a6c !important;
+  padding: 2px 15px !important;
+  height: auto !important; }
+
+.admin-menu,
+.user-menu {
+  margin-bottom: 0; }
+
+.navbar-default {
+  background-color: white; }
+  .navbar-default .navbar-toggle,
+  .navbar-default .navbar-toggle.collapsed,
+  .navbar-default .navbar-toggle:focus {
+    background-color: white;
+    border-width: 0px; }
+    .navbar-default .navbar-toggle .icon-bar,
+    .navbar-default .navbar-toggle.collapsed .icon-bar,
+    .navbar-default .navbar-toggle:focus .icon-bar {
+      background-color: #554a6c; }
+  .navbar-default .navbar-toggle:hover {
+    background-color: white; }
+  .navbar-default .navbar-nav {
+    margin: 0 -15px; }
+    .navbar-default .navbar-nav li a {
+      text-transform: uppercase;
+      color: #423853;
+      text-decoration: none; }
+    .navbar-default .navbar-nav li:hover {
+      background-color: #f6f6f6; }
+  .navbar-default .navbar-nav.navbar-right li:last-child {
+    background-color: #423853; }
+    .navbar-default .navbar-nav.navbar-right li:last-child a {
+      color: white; }
+  .navbar-default .navbar-nav.navbar-right .dropdown-menu li {
+    background-color: #f6f6f6; }
+    .navbar-default .navbar-nav.navbar-right .dropdown-menu li a {
+      color: #423853; }
+
+.navbar-brand {
+  padding: 2px 15px; }
+  .navbar-brand img {
+    width: 45px;
+    height: auto; }
+
+body.admin {
+  padding-top: 80px; }
+  body.admin .admin-menu {
+    z-index: 2000;
+    min-height: 20px; }
+    body.admin .admin-menu .navbar-brand {
+      padding: 5px 15px;
+      text-decoration: none;
+      height: 20px;
+      color: white; }
+    body.admin .admin-menu .navbar-toggle {
+      padding: 8px 25px;
+      background-color: #3d3d3d;
+      margin: 0;
+      border-radius: 0;
+      border: 0px; }
+    body.admin .admin-menu .navbar-collapse a {
+      color: white; }
+  body.admin .user-menu {
+    top: 30px; }
+
+footer {
+  background-color: #3d3d3d;
+  padding: 30px 0;
+  text-align: center; }
+  footer p {
+    color: white; }
+  footer a {
+    color: white;
+    text-decoration: underline; }
+  footer .socials {
+    margin-bottom: 15px;
+    font-size: 36px; }
+    footer .socials a {
+      padding: 0 15px; }
+    footer .socials a:hover {
+      color: white; }
+
+h2.lead {
+  font-size: 30px;
+  text-align: center; }
+
+p.lead {
+  font-size: 20px;
+  font-weight: 300;
+  padding-bottom: 30px; }
+
+.charity {
+  margin: 15px 0px 30px;
+  padding: 0 0 30px;
+  overflow: hidden;
+  text-align: center;
+  background-color: white; }
+  .charity h4, .charity h5, .charity p, .charity a {
+    color: #423853; }
+  .charity h4 {
+    text-transform: uppercase; }
+  .charity .charity-logo {
+    background-color: white;
+    margin-bottom: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 15px 15px 0 0;
+    border-bottom: 4px solid #554a6c; }
+    .charity .charity-logo img {
+      max-width: 200px; }
+  .charity .charity-description {
+    padding-bottom: 15px; }
+    .charity .charity-description p {
+      padding: 0 15px; }
+  .charity .vote {
+    padding: 7px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    border-color: #423853; }
+  .charity .vote:hover {
+    color: #423853; }
+  .charity .passcode {
+    padding: 0 15px; }
+  .charity .passcode-input {
+    width: 70%;
+    margin: 0 auto; }
+  .charity .vote-tally {
+    color: white;
+    border: 2px solid white;
+    border-radius: 3px; }
+
+body.no-menu {
+  padding-top: 0; }
+
+div.vote-tally {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 100%;
+  height: 80%;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.vote-tally {
+  background-color: white;
+  color: black; }
+  .vote-tally h1, .vote-tally h2 {
+    color: black; }
+  .vote-tally h2.lead {
+    padding-top: 15px; }
+  .vote-tally h1 img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    margin-top: -7px; }
+  .vote-tally .votes {
+    width: 80%;
+    margin: 0 auto; }
+  .vote-tally h2 {
+    padding-top: 15px;
+    margin-bottom: 15px;
+    text-transform: capitalize; }
+  .vote-tally .progress {
+    height: 50px; }
+    .vote-tally .progress .progress-bar {
+      background-color: #554a6c;
+      font-size: 1.5em;
+      padding-top: 15px; }
+
+.password {
+  border: 2px solid #554a6c;
+  top: 10px;
+  padding: 0px 50px;
+  border-radius: 5px; }
+  .password h2.lead {
+    padding-top: 0; }
+  .password h5 {
+    color: #554a6c; }
+
+.admin-edit {
+  position: absolute;
+  top: 5px;
+  right: 20px; }
+  .admin-edit a {
+    margin-right: 5px; }
+
+body.admin.backend {
+  background-color: white;
+  color: #423853; }
+  body.admin.backend h2, body.admin.backend h3, body.admin.backend h4, body.admin.backend h5, body.admin.backend h6, body.admin.backend p, body.admin.backend a {
+    color: #423853; }
+  body.admin.backend #edit-image {
+    margin: 15px 0;
+    width: 75px; }
+  body.admin.backend .btn {
+    color: white; }
+  body.admin.backend .btn-secondary {
+    color: white; }
+  body.admin.backend .btn-secondary:hover {
+    color: #423853; }
+  body.admin.backend .btn {
+    text-decoration: none; }
+  body.admin.backend main .container hr:last-child {
+    display: none; }
+  body.admin.backend .event {
+    position: relative; }
+  body.admin.backend .charity-list {
+    margin-bottom: 30px; }
+  body.admin.backend .charity {
+    text-align: left;
+    margin: 0; }
+  body.admin.backend footer p, body.admin.backend footer a {
+    color: white; }
+
+.admin-options {
+  position: absolute;
+  right: 15px;
+  width: 45px;
+  padding: 0;
+  top: 20px; }
+  .admin-options .admin-gear {
+    background-color: #554a6c;
+    border: 2px solid white;
+    color: white;
+    font-size: 18px;
+    width: 45px;
+    height: 45px;
+    padding: 9px 0;
+    text-align: center;
+    cursor: pointer;
+    z-index: 100; }
+    .admin-options .admin-gear i {
+      color: white; }
+  .admin-options .admin-show {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    right: 45px;
+    padding: 15px 15px;
+    transition: opacity .2s;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    z-index: 100; }
+    .admin-options .admin-show .btn {
+      margin-bottom: 5px; }
+    .admin-options .admin-show .btn:last-child {
+      margin-bottom: 0; }
+    .admin-options .admin-show hr {
+      margin: 15px -15px; }
+    .admin-options .admin-show p {
+      margin-bottom: 0; }
+
+.admin-options:hover .admin-show {
+  display: block;
+  opacity: 1; }
+  .admin-options:hover .admin-show a {
+    color: white;
+    text-decoration: none; }
+
+#app-layout .registration p {
+  color: #554a6c; }
+
+#app-layout .registration .special {
+  margin-top: 45px; }
+  #app-layout .registration .special p {
+    color: #554a6c;
+    font-size: x-small; }
+  #app-layout .registration .special span {
+    margin: 0 20px 0 10px; }
+
+#app-layout .registration .special.newM {
+  margin-bottom: 45px; }
+
+.flashBG {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999; }
+  .flashBG .flashContainer {
+    position: relative;
+    top: 50px;
+    padding: 10px 0;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: white;
+    border: 2px solid white;
+    z-index: 9999; }
+    .flashBG .flashContainer p {
+      color: #423853;
+      font-size: 20px;
+      text-align: center; }
+    .flashBG .flashContainer span img {
+      width: 25px; }
+
+/*# sourceMappingURL=app.css.map */
