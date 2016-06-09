@@ -142,7 +142,7 @@ Route::group(['middleware' => 'web'], function () {
     ]);
     Route::patch('charities/{charity}', [
         'middleware' => 'admin',
-        'uses' => 'CharitiesController@update'
+        'uses' => 'CharitiesController@updateCharity'
     ]);
 
 

@@ -71,6 +71,7 @@ a {
   padding-top: 30px; }
 
 .welcome {
+  padding: 50px 0 50px;
   color: white; }
   .welcome h2 {
     padding-bottom: 30px; }
@@ -159,6 +160,8 @@ body.admin {
       border-radius: 0;
       border: 0px; }
     body.admin .admin-menu .navbar-collapse a {
+      color: white; }
+    body.admin .admin-menu .navbar-collapse .dropdown-menu a {
       color: white; }
   body.admin .user-menu {
     top: 30px; }
@@ -362,7 +365,7 @@ body.admin.backend {
     color: white;
     text-decoration: none; }
 
-#app-layout .registration p {
+#app-layout .registration label, #app-layout .registration h1, #app-layout .registration h2, #app-layout .registration h3, #app-layout .registration h4, #app-layout .registration h5, #app-layout .registration p {
   color: #554a6c; }
 
 #app-layout .registration #province option {
@@ -396,6 +399,7 @@ body.admin.backend {
   .flashBG .flashContainer {
     position: relative;
     top: 50px;
+    left: 7%;
     padding: 10px 0;
     border: 1px solid black;
     border-radius: 4px;
@@ -408,5 +412,12 @@ body.admin.backend {
       text-align: center; }
     .flashBG .flashContainer span img {
       width: 25px; }
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 5px;
+    padding-bottom: 5px; }
+  .admin .admin-menu .navbar-collapse .dropdown-menu a {
+    color: #423853 !important; } }
 
 /*# sourceMappingURL=app.css.map */

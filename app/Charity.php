@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Charity extends Model
 {
-	protected $fillable = ['title', 'body', 'thumbnail'];
+	protected $fillable = ['title', 'body', 'thumbnail', 'url'];
    
     public function event()
     {
