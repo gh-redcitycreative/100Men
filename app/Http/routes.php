@@ -58,6 +58,12 @@ Route::group(['middleware' => 'web'], function () {
         return redirect('/home');
      });
 
+     Route::get('voteFail', function()
+     {
+        Session::flash('status', 'Wrong passcode, try again.');
+        return redirect('/home');
+     });
+
     Route::get('checked-in', function()
      {
         Session::flash('status', 'Thank you for coming this evening!');
@@ -138,11 +144,13 @@ Route::group(['middleware' => 'web'], function () {
     //Charity edit functionality 
     Route::get('charities/{charity}/edit', [
         'middleware' => 'admin',
-        'uses' => 'CharitiesController@editCharity'
+        'uses' => 'CharitiesController@editCharity',
+        'file' => 'true' 
     ]);
     Route::patch('charities/{charity}', [
         'middleware' => 'admin',
-        'uses' => 'CharitiesController@updateCharity'
+        'uses' => 'CharitiesController@updateCharity',
+        'file' => 'true' 
     ]);
 
 

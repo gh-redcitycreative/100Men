@@ -20,10 +20,9 @@ class CharitiesController extends Controller
             if ($request->hasFile('thumbnail')) 
             {
                 $file = $charity->thumbnail;
-                $name = time() . '-' .$file->getCLientOriginaLName();
+                $name = $file->getCLientOriginaLName();
                 $file = $file->move(public_path().'/images/', $name);
-               
-                  $charity->thumbnail = 'images/' . $name;
+                $charity->thumbnail = 'images/' . $name;
                 // return 'Done';
             }
    
@@ -33,12 +32,19 @@ class CharitiesController extends Controller
 }
     public function editCharity(Charity $charity)
     { 
+        
     	return view('charities.edit', compact('charity'));
+
     }
     public function updateCharity(Request $request, Charity $charity)
     {
+
+        
         $charity->update($request->all()); 
-        return back();
+
+
+         return back();
+        
     }
     public function delete(Charity $charity)
     {

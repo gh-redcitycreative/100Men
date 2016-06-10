@@ -54,7 +54,7 @@
 
         <script type="text/javascript">
 
-        // Date Picker
+        // Date Picker 
         $( '#date' ).pickadate({
             formatSubmit : 'yyyy-mm-dd 00:00:00',
             hiddenName: true
@@ -63,8 +63,14 @@
         $(".flashBox .exit").click(function(){
             $(".flashBox").hide();
         });
-     
-      </script>
+        // gear
+
+         $(".admin-options").click(function(){
+            $(this).find(".admin-show").toggleClass("show");
+            console.log('hit that button');
+        });
+        </script>
+        
     @yield('scripts')
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>

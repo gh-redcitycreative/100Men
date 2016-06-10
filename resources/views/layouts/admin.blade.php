@@ -63,6 +63,13 @@
         $(".flashBox .exit").click(function(){
             $(".flashBox").hide();
         });
+
+         // gear
+
+         $(".admin-options").click(function(){
+            $(this).find(".admin-show").toggleClass("show");
+            console.log('hit that button');
+        });
      
       </script>
 

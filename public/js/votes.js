@@ -19,8 +19,6 @@ $('.passcode-show-3').click(function(){
 
 
 
-
-
 $('.vote-tally .btn').click(function(){
 
 	$('.vote-tally .btn').hide();
@@ -35,16 +33,23 @@ $('.vote-tally .btn').click(function(){
 
 
 			//setting the charities values 
+
+			$('.vote-tally-1').html(resp.first);
 			$('#charity-1').attr({
 			    style :'width:'+firstPercent+'%', 
 			    'aria-valuenow' : resp.first,
 			}).html(resp.first);
-			$('.vote-tally-1').html(resp.first);
+
+
+
+			$('.vote-tally-2').html(resp.second);
 			$('#charity-2').attr({
 			    style :'width:'+secondPercent+'%', 
 			    'aria-valuenow' : resp.second,
 			}).html(resp.second);
-			
+
+
+			$('.vote-tally-3').html(resp.third);
 			$('#charity-3').attr({
 			    style :'width:'+thirdPercent+'%', 
 			    'aria-valuenow' : resp.thrid,
