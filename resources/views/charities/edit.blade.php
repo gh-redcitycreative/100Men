@@ -14,7 +14,9 @@
 					{{ csrf_field() }}
 					<input class="form-control" type="text" name="title" value="{{ $charity->title }}">
 					<br>
-					<input class="form-control input-lg" type="file" name="thumbnail">
+					
+					<img src='{{ asset($charity->thumbnail) }}' style="width:200px;">
+
 					<br>
 					<input class="form-control" type="text" name="title" value="{{ $charity->url }}">
 					<br>

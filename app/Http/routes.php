@@ -144,11 +144,13 @@ Route::group(['middleware' => 'web'], function () {
     //Charity edit functionality 
     Route::get('charities/{charity}/edit', [
         'middleware' => 'admin',
-        'uses' => 'CharitiesController@editCharity'
+        'uses' => 'CharitiesController@editCharity',
+        'file' => 'true' 
     ]);
     Route::patch('charities/{charity}', [
         'middleware' => 'admin',
-        'uses' => 'CharitiesController@updateCharity'
+        'uses' => 'CharitiesController@updateCharity',
+        'file' => 'true' 
     ]);
 
 

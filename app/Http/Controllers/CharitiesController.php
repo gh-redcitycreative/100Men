@@ -20,7 +20,7 @@ class CharitiesController extends Controller
             if ($request->hasFile('thumbnail')) 
             {
                 $file = $charity->thumbnail;
-                $name = time() . '-' .$file->getCLientOriginaLName();
+                $name = $file->getCLientOriginaLName();
                 $file = $file->move(public_path().'/images/', $name);
                 $charity->thumbnail = 'images/' . $name;
                 // return 'Done';
@@ -42,25 +42,9 @@ class CharitiesController extends Controller
         
         $charity->update($request->all()); 
 
-        if ($request->hasFile('thumbnail')) 
 
-            $charity->thumbnail = Input::get('thumbnail');
-            $thumbnail = Input::file('thumbnail');
-
-            {
-                $file = $charity->thumbnail;
-
-                $getName = $charity->thumbnail;
-                
-                $name = time() . '-' .$file->getCLientOriginaLName();
-                $file = $file->move(public_path().'/images/', $name);
-                $charity->thumbnail = 'images/' . $name;
-                return  ($thumbnail);
-            }
-
-
-        // return back();
-        return redirect('/events');
+         return back();
+        
     }
     public function delete(Charity $charity)
     {
