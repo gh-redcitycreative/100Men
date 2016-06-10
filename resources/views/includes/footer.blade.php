@@ -9,4 +9,7 @@
 	<p>100 Men YYC &copy; {{ date("Y") }} </p>
 	<p id=siteby>Website By: <a href="www.redcitycreative.com"><img src="/images/RCC_Footer.jpeg" style="width:100px;" /></a></p>
 
+
+	
+
 </footer>

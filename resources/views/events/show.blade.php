@@ -35,6 +35,7 @@
 			</div>	
 
 		@include ('flash')
+
 			
 		</div>	
 </div>	
@@ -68,6 +69,5 @@
 
 
 @endsection
-
 
                    

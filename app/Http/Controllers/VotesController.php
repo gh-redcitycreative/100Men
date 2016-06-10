@@ -26,7 +26,7 @@ class VotesController extends Controller
 	        return redirect('/voted');
         }
         else{
-            // flash message
+            return redirect('/voteFail');
            return back(); 
         }
     }

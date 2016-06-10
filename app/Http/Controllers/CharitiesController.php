@@ -22,8 +22,7 @@ class CharitiesController extends Controller
                 $file = $charity->thumbnail;
                 $name = time() . '-' .$file->getCLientOriginaLName();
                 $file = $file->move(public_path().'/images/', $name);
-               
-                  $charity->thumbnail = 'images/' . $name;
+                $charity->thumbnail = 'images/' . $name;
                 // return 'Done';
             }
    
@@ -33,12 +32,35 @@ class CharitiesController extends Controller
 }
     public function editCharity(Charity $charity)
     { 
+        
     	return view('charities.edit', compact('charity'));
+
     }
     public function updateCharity(Request $request, Charity $charity)
     {
+
+        
         $charity->update($request->all()); 
-        return back();
+
+        if ($request->hasFile('thumbnail')) 
+
+            $charity->thumbnail = Input::get('thumbnail');
+            $thumbnail = Input::file('thumbnail');
+
+            {
+                $file = $charity->thumbnail;
+
+                $getName = $charity->thumbnail;
+                
+                $name = time() . '-' .$file->getCLientOriginaLName();
+                $file = $file->move(public_path().'/images/', $name);
+                $charity->thumbnail = 'images/' . $name;
+                return  ($thumbnail);
+            }
+
+
+        // return back();
+        return redirect('/events');
     }
     public function delete(Charity $charity)
     {
