@@ -250,9 +250,9 @@ I agree to fulfill my donation commitment even if I did not vote for the charity
                           <hr/>
                         <!-- New Member? * -->
                         <div class="special newM form-group{{ $errors->has('community') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">New Member?</label>
+                            <label class="col-md-4 control-label">Is this your first 100 Men Calgary Event?</label>
 
-                        <div class="col-md-6">
+                        <div class="inputs col-md-6">
                                 <input type="radio" value="1" name="new_member"><span>Yes</span>
                                 <input type="radio" value="0" name="new_member"><span>No, I'm a returning member.</span>
                                 @if ($errors->has('new_member'))

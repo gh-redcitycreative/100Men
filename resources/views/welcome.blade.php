@@ -15,7 +15,7 @@
                     <p><a href="/login" class="btn btn-primary">Returning Member</a></p>
                     <p>New Members Sign Up</p>
                     <p><a href="/register" class="btn btn-primary">New Member</a></p>
-                    <p>ajdlfjadf</p>
+                    
                 </div>
             </div>
         </div>        
