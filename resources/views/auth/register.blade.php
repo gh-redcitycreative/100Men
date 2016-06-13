@@ -12,7 +12,7 @@
 
                         <!-- First Name -->
                         <div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">What is your first Name?</label>
+                            <label class="col-md-4 control-label">What is your First Name?</label>
 
                             <div class="col-md-6">
                                 <input type="text" class="form-control" name="first_name" value="{{ old('first_name') }}">
@@ -29,7 +29,7 @@
                             <label class="col-md-4 control-label">What is your Last Name?</label>
 
                         <div class="col-md-6">
-                                <input type="text" class="form-control" name="last_name" value="">
+                                <input type="text" class="form-control" name="last_name" value="{{ old('last_name') }}">
 
                                 @if ($errors->has('last_name'))
                                     <span class="help-block">
@@ -87,7 +87,7 @@
                             <label class="col-md-4 control-label">Street Address</label>
 
                         <div class="col-md-6">
-                                <input type="text" class="form-control" name="address" value="">
+                                <input type="text" class="form-control" name="address" value="{{ old('address') }}">
 
                                 @if ($errors->has('address'))
                                     <span class="help-block">
@@ -101,7 +101,7 @@
                             <label class="col-md-4 control-label">City/Town</label>
 
                         <div class="col-md-6">
-                                <input type="text" class="form-control" name="city_town" value="">
+                                <input type="text" class="form-control" name="city_town" value="{{ old('city_town') }}">
 
                                 @if ($errors->has('city_town'))
                                     <span class="help-block">
@@ -133,7 +133,7 @@
                             <label class="col-md-4 control-label">Postal Code</label>
 
                         <div class="col-md-6">
-                                <input type="text" class="form-control" name="postal_code" value="">
+                                <input type="text" class="form-control" name="postal_code" value="{{ old('postal_code') }}">
 
                                 @if ($errors->has('postal_code'))
                                     <span class="help-block">
@@ -148,7 +148,7 @@
                             <label class="col-md-4 control-label">And what is your phone number?</label>
 
                         <div class="col-md-6">
-                                <input type="text" class="form-control" name="phone_number" value="">
+                                <input type="text" class="form-control" name="phone_number" value="{{ old('phone_number') }}">
 
                                 @if ($errors->has('phone_number'))
                                     <span class="help-block">
@@ -163,7 +163,7 @@
                             <label class="col-md-4 control-label">If you use Twitter, what is your twitter handle?</label>
 
                         <div class="col-md-6">
-                                <input type="text" class="form-control" name="twitter" value="">
+                                <input type="text" class="form-control" name="twitter" value="{{ old('twitter') }}">
 
                                 @if ($errors->has('twitter'))
                                     <span class="help-block">
@@ -175,7 +175,7 @@
                         <!-- Where did you hear about 100 Men, [NAME]? *  -->
 
                         <div class="form-group{{ $errors->has('referral') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Where did you hear about 100 Men</label>
+                            <label class="col-md-4 control-label">Where did you hear about 100 men calgary? </label>
 
                         <div class="col-md-6">
                                 <select id="province" name="referral" class="form-control">

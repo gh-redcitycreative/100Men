@@ -6,6 +6,7 @@ class Referral
 
 {
 	protected static $referrals = [
+	   "--Select--" 				    =>"0",
 	   "100 Women Calgary"				=>"1",
 	   "Calgary Herald"					=>"2",
 	   "Calgary Sun"					=>"3",

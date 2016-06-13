@@ -180,7 +180,7 @@ Route::group(['middleware' => 'web'], function () {
                 "amount" => 10300, // amount in cents, again
                 "currency" => "cad",
                 "source" => $token,
-                "description" => "Example charge"
+                "description" => "Web App Donation charge"
             ));
         } catch(\Stripe\Error\Card $e) {
         // The card has been declined
