@@ -8,7 +8,7 @@
     <title>Laravel</title>
 
     <!-- Fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
 
     <!-- Styles -->
@@ -21,7 +21,7 @@
     <link href="{{ asset('pickadate/compressed/themes/classic.date.css') }}" rel="stylesheet">
 
 </head>
-<body id="app-layout" class=@if(Auth::guest()) @elseif (Auth::user()->admin == 'admin')'admin ' @endif>
+<body id="app-layout" class='@if(Auth::guest()) @elseif (Auth::user()->admin == 'admin')admin  @endif ' >
 
   
   @include('includes.nav')

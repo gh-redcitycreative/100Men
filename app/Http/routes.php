@@ -66,7 +66,7 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('checked-in', function()
      {
-        Session::flash('status', 'Thank you for coming this evening!');
+        Session::flash('status', 'Thank you for checking in! Please have fun and be responsible the evening.');
         return redirect('/home');
      });
 
@@ -180,7 +180,7 @@ Route::group(['middleware' => 'web'], function () {
                 "amount" => 10300, // amount in cents, again
                 "currency" => "cad",
                 "source" => $token,
-                "description" => "Example charge"
+                "description" => "Web App Donation charge"
             ));
         } catch(\Stripe\Error\Card $e) {
         // The card has been declined

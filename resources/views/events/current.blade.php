@@ -3,7 +3,7 @@
 @section('header')
     <div class="container">
 		<h1>{{ $currentEvent->title }}</h1>
-		<h4 class=page-sub-title>Charity Nominees</h4>
+		<h3 class=page-sub-title>Charity Nominees</h3>
 	</div>
 @endsection
 
@@ -16,7 +16,8 @@
 			<div class="col-xs-12">
 				@if($currentEvent->checkin()->where('checkins.user_id', $user->id)->count() < 1 )
 					<div class="alert alert-danger" role="alert">
-						<p class="lead text-center">Please check in to event below</p>
+						<p class="lead text-center">We give a damn about you being here. </p>
+						<p class='lead text-center'>Make sure you check in to the event. </p>
 						<form method="POST" action="/events/{{ $currentEvent->id }}/check-in">
 							<div class="form-group text-center">
 								{{ csrf_field() }}
@@ -26,9 +27,8 @@
 					</div>
 				@else
 
-					<h2 class="lead">Here are Your Charitable Nominees</h2>
 
-					<p class="lead text-center">Once voting has begun we will display the secret word so that you can submit your vote.</p>					
+					<h3 class="lead text-center">Once voting has begun we will display the secret word so that you can submit your vote.</h3>			
 				@endif	
 			</div>
 

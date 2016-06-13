@@ -10,11 +10,11 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="text-center">
-                    <h2>Welcome to <br class='break'>100 Men YYC</h2>
-                    <p>Returning Members Please Login</p>
-                    <p><a href="/login" class="btn btn-primary">Returning Member</a></p>
-                    <p>New Members Sign Up</p>
-                    <p><a href="/register" class="btn btn-primary">New Member</a></p>
+                    <h2 class=lead>Do <strong>You</strong> Give a Damn?</h2>
+                    <p>Returning Members</p>
+                    <p><a href="/login" class="btn btn-primary">Login</a></p>
+                    <p>New Members</p>
+                    <p><a href="/register" class="btn btn-primary">Sign Up Now</a></p>
                     
                 </div>
             </div>

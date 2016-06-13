@@ -6,6 +6,7 @@ class Province
 
 {
 	protected static $provinces = [
+	   "--Select--" 				=> "SL",
 	   "Alberta" 					=> "AB",
 	   "British Columbia" 			=> "BC",
 	   "Manitoba" 					=> "MB",
