@@ -66,7 +66,7 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('checked-in', function()
      {
-        Session::flash('status', 'Thank you for coming this evening!');
+        Session::flash('status', 'Thank you for checking in! Please have fun and be responsible the evening.');
         return redirect('/home');
      });
 

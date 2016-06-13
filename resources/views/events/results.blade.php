@@ -7,10 +7,10 @@
 
 <div class="vote-tally">
 	<div class="password">
-		<h5> Event Secret Password </h5>
+		<h5> Event Secret Passcode </h5>
 		<h2 class="lead">{{ $event->passcode}}</h2>
 	</div>
-	<h1 ><img src="/images/100-men-logo.png"> Live Vote Tally </h1>
+	<h1 ><img src="/images/100-Men-Logo.png" alt="100men logo"> Live Vote Tally </h1>
 	
 	<button class="btn btn-secondary">Get Live results</button>
 	<div class="votes" style='display:none;'>
