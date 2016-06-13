@@ -11,10 +11,10 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="text-center">
                     <h2 class=lead>Do <strong>You</strong> Give a Damn?</h2>
-                    <p>Returning Members</p>
+                    <p>Returning Member?</p>
                     <p><a href="/login" class="btn btn-primary">Login</a></p>
-                    <p>New Members</p>
-                    <p><a href="/register" class="btn btn-primary">Sign Up Now</a></p>
+                    <p>New Member?</p>
+                    <p><a href="/register" class="btn btn-primary">Sign Up</a></p>
                     
                 </div>
             </div>
