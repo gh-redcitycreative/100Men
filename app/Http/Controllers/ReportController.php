@@ -26,8 +26,8 @@ class ReportController extends Controller
       foreach ($new_users as $new_user) {
        // return $new_user;
         $csv->insertOne($new_user->toArray());
-        $new_user->new_member = 1; 
-        $new_user->update();  
+        // $new_user->new_member = 1; 
+        // $new_user->update();  
       }
 
      
