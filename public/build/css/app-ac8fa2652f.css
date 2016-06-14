@@ -185,6 +185,8 @@ footer {
       padding: 0 15px; }
     footer .socials a:hover {
       color: white; }
+  footer p#siteby {
+    padding-top: 10px; }
 
 h2.lead {
   font-size: 30px;
