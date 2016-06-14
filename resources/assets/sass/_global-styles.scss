@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6, p{
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active{
-	background-color:$dk-purple;
+	background-color:$dk-purple !important;
 	border:2px solid white;
 	color:white;
 }

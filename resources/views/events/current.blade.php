@@ -28,7 +28,7 @@
 				@else
 
 
-					<h3 class="lead text-center">Once voting has begun we will display the secret word so that you can submit your vote.</h3>			
+					<h3 class="lead text-center">Once voting has begun we will display the passcode so that you can submit your vote.</h3>			
 				@endif	
 			</div>
 

@@ -55,6 +55,14 @@
 						<br>
 						<input class="form-control input-lg" type="text" name="url" placeholder="Charity Website">
 						<br>
+						<input class="form-control input-lg" type="text" name="url" placeholder="Facebook url">
+						<br>
+						<input class="form-control input-lg" type="text" name="url" placeholder="Twitter url">
+						<br>
+						<input class="form-control input-lg" type="text" name="url" placeholder="YouTube url">
+						<br>
+						<input class="form-control input-lg" type="text" name="url" placeholder="Instagram url">
+						<br>
 						<textarea class="form-control input-lg" name="body" id="" cols="30" rows="10" placeholder="Charity Description"></textarea>
 					</div>
 					<div class="form-group">

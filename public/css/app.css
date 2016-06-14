@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6, p {
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-  background-color: #423853;
+  background-color: #423853 !important;
   border: 2px solid white;
   color: white; }
 
@@ -270,8 +270,7 @@ div.vote-tally {
     margin: 0 auto; }
   .vote-tally h2 {
     padding-top: 15px;
-    margin-bottom: 15px;
-    text-transform: capitalize; }
+    margin-bottom: 15px; }
   .vote-tally .progress {
     height: 50px; }
     .vote-tally .progress .progress-bar {
