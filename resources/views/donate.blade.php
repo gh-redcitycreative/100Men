@@ -26,7 +26,7 @@
 				  <script
 				    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 				    data-key="pk_live_g5a87a8s4QtIcze6ZBpugphR"
-				    data-amount="10300" 
+				    data-amount="10330" 
 				    data-name="100 Men Who Give A Damn Society Of Alberta"
 				    data-description="Charity Donation"
 				    data-image="https://s3.amazonaws.com/stripe-uploads/acct_17lPfaBU2zDDaeommerchant-icon-1457124321408-600x600.png"
