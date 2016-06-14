@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'glen@redcitycreative.com', 'name' => '100 Men Team'],
+    'from' => ['address' => 'hello@100mencalgary.com', 'name' => '100 Men Team'],
 
     /*
     |--------------------------------------------------------------------------
