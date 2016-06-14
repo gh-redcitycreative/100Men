@@ -14,11 +14,17 @@
 					{{ csrf_field() }}
 					<input class="form-control" type="text" name="title" value="{{ $charity->title }}">
 					<br>
-					
 					<img src='{{ asset($charity->thumbnail) }}' style="width:200px;">
-
 					<br>
 					<input class="form-control" type="text" name="title" value="{{ $charity->url }}">
+					<br>
+					<input class="form-control input-lg" type="text" name="facebook_url" value="{{ $charity->facebook_url }}">
+					<br>
+					<input class="form-control input-lg" type="text" name="twitter_url" value="{{ $charity->twitter_url }}">
+					<br>
+					<input class="form-control input-lg" type="text" name="youtube_url" value="{{ $charity->youtube_url }}">
+					<br>
+					<input class="form-control input-lg" type="text" name="instagram_url" value="{{ $charity->instagram_url }}">
 					<br>
 					<textarea class="form-control" name="body" id="" cols="30" rows="10" placeholder="Charity Description">{{ $charity->body }}</textarea>
 				</div>

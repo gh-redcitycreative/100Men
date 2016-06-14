@@ -189,6 +189,16 @@ Route::group(['middleware' => 'web'], function () {
 
 
     });
+    //checklist for paid users
+    Route::get('checklist', [
+        'middleware' => 'admin',
+        'uses' => 'ReportController@checklist'
+    ]);
+    Route::patch('checklist/{user}', [
+        'middleware' => 'admin',
+        'uses' => 'ReportController@update_checklist'
+    ]);
+
 
     //reports
 

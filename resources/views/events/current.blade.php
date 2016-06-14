@@ -18,6 +18,7 @@
 					<div class="alert alert-danger" role="alert">
 						<p class="lead text-center">We give a damn about you being here. </p>
 						<p class='lead text-center'>Make sure you check in to the event. </p>
+						<p class='lead text-center'>If you didn't bring cash or a cheque to this event you can pay through the donate button in the menu.</p>
 						<form method="POST" action="/events/{{ $currentEvent->id }}/check-in">
 							<div class="form-group text-center">
 								{{ csrf_field() }}
@@ -59,7 +60,26 @@
 				
 				<h4> {{ $charity->title }} </h4>
 				<h5><a href="{{ $charity->url }}">View Charity Website</a></h5>
+				<div class=social-media>
+					@if ($charity->facebook_url == null)                        
+					@else 
+						<a href="{{ $charity->facebook_url }}"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+					@endif
+					@if ($charity->twitter_url == null)                        
+					@else 
+						<a href="{{ $charity->twitter_url }}"><i class="fa fa-twitter" aria-hidden="true"></i></a> 
+					@endif
+					@if ($charity->youtube_url == null)                        
+					@else 
+						<a href="{{ $charity->youtube_url }}"><i class="fa fa-youtube" aria-hidden="true"></i></a> 
+					@endif
+					@if ($charity->instagram_url == null)                        
+					@else 
+						<a href="{{ $charity->instagram_url }}"><i class="fa fa-instagram" aria-hidden="true"></i></a> 
+					@endif
+				</div>	
 				<p > {{ $charity->body }} </p>
+
 			</div>
 			<!-- button for voting  -->
 			@if($currentEvent->votes()->where('votes.user_id', $user->id)->count() == 0)

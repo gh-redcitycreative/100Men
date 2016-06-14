@@ -22,6 +22,7 @@
  -->                        <li><a href="{{ url('/events') }}">Events</a></li>
                         <li><a href="{{ url('/events/add') }}">Add Event +</a></li>
                         <li><a href="{{ url('/events/live-results') }}">Live Results</a></li>
+                        <li><a href="{{ url('/checklist') }}">Checklist</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 Reports  <span class="caret"></span>

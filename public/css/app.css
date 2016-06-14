@@ -220,6 +220,9 @@ p.lead {
     padding-bottom: 15px; }
     .charity .charity-description p {
       padding: 0 15px; }
+  .charity .social-media .fa {
+    font-size: 30px;
+    padding: 15px; }
   .charity .vote {
     padding: 7px 30px;
     font-size: 18px;

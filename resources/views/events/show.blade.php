@@ -55,13 +55,13 @@
 						<br>
 						<input class="form-control input-lg" type="text" name="url" placeholder="Charity Website">
 						<br>
-						<input class="form-control input-lg" type="text" name="url" placeholder="Facebook url">
+						<input class="form-control input-lg" type="text" name="facebook_url" placeholder="Facebook url">
 						<br>
-						<input class="form-control input-lg" type="text" name="url" placeholder="Twitter url">
+						<input class="form-control input-lg" type="text" name="twitter_url" placeholder="Twitter url">
 						<br>
-						<input class="form-control input-lg" type="text" name="url" placeholder="YouTube url">
+						<input class="form-control input-lg" type="text" name="youtube_url" placeholder="YouTube url">
 						<br>
-						<input class="form-control input-lg" type="text" name="url" placeholder="Instagram url">
+						<input class="form-control input-lg" type="text" name="instagram_url" placeholder="Instagram url">
 						<br>
 						<textarea class="form-control input-lg" name="body" id="" cols="30" rows="10" placeholder="Charity Description"></textarea>
 					</div>

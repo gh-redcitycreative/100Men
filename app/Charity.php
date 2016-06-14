@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Charity extends Model
 {
-	protected $fillable = ['title', 'body', 'thumbnail', 'url'];
-   
+	protected $fillable = ['title', 'body', 'thumbnail', 'url', 'facebook_url', 'twitter_url','youtube_url', 'instagram_url'];
+
     public function event()
     {
     	return $this->belongsTo('App\Event');

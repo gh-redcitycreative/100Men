@@ -84,7 +84,7 @@
 
                         <!-- What is your address? * -->
                          <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
-                            <label class="col-md-4 control-label">Street Address</label>
+                            <label class="col-md-4 control-label">Street Address <p class="small-txt">Tax receipts will be sent to this address.</p></label>
 
                         <div class="col-md-6">
                                 <input type="text" class="form-control" name="address" value="{{ old('address') }}">
