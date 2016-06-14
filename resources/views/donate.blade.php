@@ -20,6 +20,7 @@
 	
 		<div class="row">
 			<div class="col-xs-12">
+				<br>
 				<form action="/stripe/payment" method="POST">
 				 {{ csrf_field() }}
 				  <script
