@@ -185,9 +185,7 @@ Route::group(['middleware' => 'web'], function () {
         } catch(\Stripe\Error\Card $e) {
         // The card has been declined
         }
-        return back;
-
-
+        return back();
     });
     //checklist for paid users
     Route::get('checklist', [
