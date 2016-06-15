@@ -168,7 +168,7 @@ Route::group(['middleware' => 'web'], function () {
 
         // Set your secret key: remember to change this to your live secret key in production
         // See your keys here https://dashboard.stripe.com/account/apikeys
-        \Stripe\Stripe::setApiKey("sk_test_9nWvguri1A0OI3mqdtvq8LsT");
+        \Stripe\Stripe::setApiKey("sk_live_oVRNvYkUrKwW7BgieHN4tAxp");
 
         // Get the credit card details submitted by the form
 
