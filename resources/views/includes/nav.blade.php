@@ -80,8 +80,8 @@
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
                         </li>
-                        {{-- <li><a href="/donate">Donate</a></li> --}}
-                        <li><a href='https://100mencalgary.com/donate/'> Donate</a></li>
+                        <li><a href="/donate">Donate</a></li>
+                       
                     @endif
                 </ul>
             </div>
