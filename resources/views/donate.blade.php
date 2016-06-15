@@ -22,7 +22,7 @@
 			<div class="col-xs-12">
 				<br>
 				<form action="/stripe/payment" method="POST">
-				 {{ csrf_field() }}
+				
 				  <script
 				    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 				    data-key="pk_live_g5a87a8s4QtIcze6ZBpugphR"
