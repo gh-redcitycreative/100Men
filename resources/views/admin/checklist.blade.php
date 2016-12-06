@@ -2,7 +2,7 @@
 
 
 @section('content')
-<div class="container">
+<div class="container check-list">
 	<div class="row">
 		<div class="col-xs-6">
 			<h3>Members</h3>
@@ -12,7 +12,7 @@
 		</div>
 	</div>	
 	@foreach ($checked as $user)
-	<div class="row">
+	<div class="row user">
 		<div class="col-xs-6">{{$user->last_name}}, {{$user->first_name}}</div>
 		<div class="col-xs-6">
 			<form method="POST" action="/checklist/{{ $user->id }}"> 

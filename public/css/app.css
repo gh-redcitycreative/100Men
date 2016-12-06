@@ -328,6 +328,11 @@ body.admin.backend {
   body.admin.backend footer p, body.admin.backend footer a {
     color: white; }
 
+.check-list .user {
+  padding: 10px 0; }
+  .check-list .user button {
+    margin-left: 10px; }
+
 .admin-options {
   position: absolute;
   right: 15px;

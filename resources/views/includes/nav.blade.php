@@ -30,6 +30,9 @@
                             <ul class="dropdown-menu" role="menu">
                                     <li><a href="{{ url('/reports/new-members') }}">New Members</a></li>
                                     <li><a href="{{ url('/reports/attendies') }}">Event Attendies</a></li>
+                                    <li><a href="{{ url('/reports/clear-new-members')}}">
+                                        Clear New Member List
+                                    </a></li>
                             </ul>
                         </li>
                     </ul>

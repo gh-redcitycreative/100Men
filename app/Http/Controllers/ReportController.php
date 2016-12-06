@@ -16,7 +16,7 @@ class ReportController extends Controller
     {
       $users = User::all();
      
-      $new_users = User::where('new_member', 0)->get();
+      $new_users = User::where('new_member', 1)->get();
 
       $csv = \League\Csv\Writer::createFromFileObject(new \SplTempFileObject()); 
       $csv->insertOne(\Schema::getColumnListing('users'));
@@ -25,15 +25,20 @@ class ReportController extends Controller
      
       foreach ($new_users as $new_user) {
        // return $new_user;
-        $csv->insertOne($new_user->toArray());
-        // $new_user->new_member = 1; 
-        // $new_user->update();  
+      $csv->insertOne($new_user->toArray());
       }
-
-     
-      
     $csv->output('new-members.csv');
-      
+    }
+
+    public function clear_members()
+    {
+      $users = User::all();
+      $new_users = User::where('new_member', 1)->get();
+      foreach ($new_users as $new_user) {
+         $new_user->new_member = 0; 
+         $new_user->update();  
+      }
+      return back();
 
     }
 

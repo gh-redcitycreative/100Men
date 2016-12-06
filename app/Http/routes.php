@@ -66,7 +66,7 @@ Route::group(['middleware' => 'web'], function () {
 
     Route::get('checked-in', function()
      {
-        Session::flash('status', 'Thank you for checking in! Please have fun and be responsible the evening.');
+        Session::flash('status', 'Thank you for checking in! Please have fun and be responsible this evening.');
         return redirect('/home');
      });
 
@@ -210,7 +210,10 @@ Route::group(['middleware' => 'web'], function () {
         'uses' => 'ReportController@attended'
     ]);
 
-
+    Route::get('reports/clear-new-members', [
+        'middleware' => 'admin',
+        'uses' => 'ReportController@clear_members'
+    ]);
 
 
 
